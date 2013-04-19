@@ -1,0 +1,6 @@
+C:\Users\Cesar\Desktop\servidor\servidor\bin\Debug\servidor.exe.config
+C:\Users\Cesar\Desktop\servidor\servidor\bin\Debug\servidor.exe
+C:\Users\Cesar\Desktop\servidor\servidor\bin\Debug\servidor.pdb
+C:\Users\Cesar\Desktop\servidor\servidor\obj\Debug\servidor.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\Desktop\servidor\servidor\obj\Debug\servidor.exe
+C:\Users\Cesar\Desktop\servidor\servidor\obj\Debug\servidor.pdb
