@@ -34,14 +34,13 @@ namespace PortafolioFinal_Chat
 
 			// Get our button from the layout resource,
 			// and attach an event to it
-			//Button button = FindViewById<Button> (Resource.Id.myButton);
 
 			Button btnLogin = FindViewById<Button> (Resource.Id.btn_Login);
 
 			btnLogin.Click += delegate {
 				try
 				{
-					Cliente = new TcpClient("192.168.1.6", 8888);
+					Cliente = new TcpClient("192.168.1.6", 6080);
 					StreamCliente = Cliente.GetStream();
 					byte[] data = Encoding.ASCII.GetBytes("Cesar");
 					StreamCliente.Write(data, 0, data.Length);
