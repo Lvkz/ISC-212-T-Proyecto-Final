@@ -1,1 +1,2 @@
-PortafolioFinal_Chat.Activity1;portafoliofinal_chat.Activity1
+PortafolioFinal_Chat.Contactos;portafoliofinal_chat.Contactos
+PortafolioFinal_Chat.Main;portafoliofinal_chat.Main

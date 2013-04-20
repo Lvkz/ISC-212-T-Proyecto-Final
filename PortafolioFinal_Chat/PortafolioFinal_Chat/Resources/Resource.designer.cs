@@ -28,6 +28,25 @@ namespace PortafolioFinal_Chat
 		{
 		}
 		
+		public partial class Animation
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int rotate_centre = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int rotate_corner = 2130968577;
+			
+			static Animation()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Animation()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -63,6 +82,7 @@ namespace PortafolioFinal_Chat
 		public partial class Id
 		{
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f060003
 			public const int button1 = 2131099651;
 			
@@ -77,6 +97,25 @@ namespace PortafolioFinal_Chat
 			
 			// aapt resource value: 0x7f060000
 			public const int textboxNombre = 2131099648;
+=======
+			// aapt resource value: 0x7f070004
+			public const int btn_entrar = 2131165188;
+			
+			// aapt resource value: 0x7f070000
+			public const int button1 = 2131165184;
+			
+			// aapt resource value: 0x7f070003
+			public const int linearLayout1 = 2131165187;
+			
+			// aapt resource value: 0x7f070005
+			public const int progressBarLogin = 2131165189;
+			
+			// aapt resource value: 0x7f070002
+			public const int textboxContraseña = 2131165186;
+			
+			// aapt resource value: 0x7f070001
+			public const int textboxNombre = 2131165185;
+>>>>>>> Agregada Actividad y Layout Contactos
 			
 			static Id()
 			{
@@ -92,10 +131,13 @@ namespace PortafolioFinal_Chat
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int Contactos = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int monoandroidsplash = 2130903041;
+			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int monoandroidsplash = 2130903042;
 			
 			static Layout()
 			{
@@ -110,11 +152,11 @@ namespace PortafolioFinal_Chat
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int app_name = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int hello = 2131034112;
 			
 			static String()
 			{
@@ -129,8 +171,8 @@ namespace PortafolioFinal_Chat
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int Mono_Android_Theme_Splash = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int Mono_Android_Theme_Splash = 2131099648;
 			
 			static Style()
 			{

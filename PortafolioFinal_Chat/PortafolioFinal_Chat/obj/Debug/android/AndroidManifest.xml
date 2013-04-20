@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="PortafolioFinal_Chat.PortafolioFinal_Chat">
-  <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8" />
+  <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
   <application android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:label="PortafolioFinal_Chat" android:name="portafoliofinal_chat.Activity1" />
+    <activity android:label="Contactos" android:name="portafoliofinal_chat.Contactos" />
+    <activity android:label="Android Chat" android:name="portafoliofinal_chat.Main" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="PortafolioFinal_Chat.PortafolioFinal_Chat.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
@@ -10,7 +11,11 @@
         <category android:name="mono.android.intent.category.SEPPUKU.PortafolioFinal_Chat.PortafolioFinal_Chat" />
       </intent-filter>
     </receiver>
+<<<<<<< HEAD
     <activity android:label="PortafolioFinal_Chat" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreen433ea66e0076402489d0bdaf2d748bed" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+=======
+    <activity android:label="Android Chat" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreenaef32c57fe3a4e04bfa9c7726858aea0" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+>>>>>>> Agregada Actividad y Layout Contactos
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
