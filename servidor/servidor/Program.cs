@@ -43,8 +43,6 @@ namespace servidor
 
                     //ciclo infinito 
                     chatiar nuevo = new chatiar(MensajeCliente, Clinte);
-
-
                 }
             }
             catch
@@ -101,10 +99,7 @@ namespace servidor
 
                 //msj enviar todos los clientes
                Program.msj_Todos(MensajeCliente,nombre);
-
-
                 //ciclo infinito 
-
 
             }
         
