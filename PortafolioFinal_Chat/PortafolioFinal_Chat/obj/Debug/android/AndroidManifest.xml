@@ -11,11 +11,7 @@
         <category android:name="mono.android.intent.category.SEPPUKU.PortafolioFinal_Chat.PortafolioFinal_Chat" />
       </intent-filter>
     </receiver>
-<<<<<<< HEAD
-    <activity android:label="PortafolioFinal_Chat" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreen433ea66e0076402489d0bdaf2d748bed" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
-=======
-    <activity android:label="Android Chat" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreenaef32c57fe3a4e04bfa9c7726858aea0" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
->>>>>>> Agregada Actividad y Layout Contactos
+    <activity android:label="Android Chat" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreendd940e32bde44b9db2815e2cd8b59c9f" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

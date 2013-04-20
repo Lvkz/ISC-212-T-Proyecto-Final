@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Chat/Activity1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Chat/Main.cs">
     <Files>
-      <File FileName="PortafolioFinal_Chat/Activity1.cs" Line="29" Column="4" />
-      <File FileName="PortafolioFinal_Chat/Resources/values/Strings.xml" Line="4" Column="38" />
+      <File FileName="PortafolioFinal_Chat/Contactos.cs" Line="9" Column="18" />
+      <File FileName="PortafolioFinal_Chat/Main.cs" Line="12" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

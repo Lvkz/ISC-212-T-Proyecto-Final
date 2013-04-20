@@ -2,12 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-<<<<<<< HEAD
-    android:layout_height="fill_parent">
-=======
     android:layout_height="fill_parent"
     android:gravity="center">
->>>>>>> Agregada Actividad y Layout Contactos
     <EditText
         android:inputType="textPersonName"
         android:layout_width="fill_parent"
@@ -33,22 +29,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1"
-<<<<<<< HEAD
-        android:gravity="right"
+        android:gravity="center"
         android:layout_marginTop="10dp">
-        <Button
-            android:text="Cancelar"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/button1" />
-=======
-        android:gravity="center">
->>>>>>> Agregada Actividad y Layout Contactos
         <Button
             android:text="Entrar"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:id="@+id/btn_entrar"
+            android:id="@+id/btn_Login"
             android:gravity="center"
             android:width="120dp"
             android:fitsSystemWindows="true"

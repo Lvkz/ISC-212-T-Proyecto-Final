@@ -1,11 +1,8 @@
 using System;
-<<<<<<< HEAD:PortafolioFinal_Chat/PortafolioFinal_Chat/Activity1.cs
 using System.Text;
 using System.Net.Sockets;
 
-=======
 using System.Threading;
->>>>>>> Agregada Actividad y Layout Contactos:PortafolioFinal_Chat/PortafolioFinal_Chat/Main.cs
 
 using Android.App;
 using Android.Content;
@@ -26,34 +23,25 @@ namespace PortafolioFinal_Chat
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-<<<<<<< HEAD:PortafolioFinal_Chat/PortafolioFinal_Chat/Activity1.cs
 			TcpClient Cliente;
 			NetworkStream StreamCliente;
 			string mensaje;
 
-=======
-			
->>>>>>> Agregada Actividad y Layout Contactos:PortafolioFinal_Chat/PortafolioFinal_Chat/Main.cs
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
 			ProgressBar mProgressBar = FindViewById<ProgressBar> (Resource.Id.progressBarLogin);
-			Button btnEntrar = FindViewById<Button> (Resource.Id.btn_entrar);
-
-			btnEntrar.Click += (sender, e) => {
-				//StartActivity(typeof(Contactos));
-			};
 
 			// Get our button from the layout resource,
 			// and attach an event to it
-<<<<<<< HEAD:PortafolioFinal_Chat/PortafolioFinal_Chat/Activity1.cs
 			//Button button = FindViewById<Button> (Resource.Id.myButton);
-			Button Boton_login= FindViewById<Button> (Resource.Id.button2);
 
-			Boton_login.Click += delegate {
+			Button btnLogin = FindViewById<Button> (Resource.Id.btn_Login);
+
+			btnLogin.Click += delegate {
 				try
 				{
-					Cliente = new TcpClient("10.0.0.2", 8888);
+					Cliente = new TcpClient("192.168.1.6", 8888);
 					StreamCliente = Cliente.GetStream();
 					byte[] data = Encoding.ASCII.GetBytes("Cesar");
 					StreamCliente.Write(data, 0, data.Length);
@@ -68,11 +56,10 @@ namespace PortafolioFinal_Chat
 				{
 					mensaje=("Error Al conectar");
 				}
-				Boton_login.Text=mensaje;
+
+				btnLogin.Text=mensaje;
 
 			};
-=======
->>>>>>> Agregada Actividad y Layout Contactos:PortafolioFinal_Chat/PortafolioFinal_Chat/Main.cs
 		}
 	}			
 }
