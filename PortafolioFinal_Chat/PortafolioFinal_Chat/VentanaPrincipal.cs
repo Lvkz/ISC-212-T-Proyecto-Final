@@ -22,8 +22,13 @@ namespace PortafolioFinal_Chat
 
 			this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
-			AddTab ("Contactos", 0);
-			AddTab ("Chats", 1);
+			AddTab ("Salas de Chat", 0);
+			AddTab ("Contactos", 1);
+			AddTab ("Chat", 2);
+
+			if (this.ActionBar.TabCount > 2)  {
+				this.ActionBar.RemoveTabAt(2);
+			}
 		}
 
 		public  void AddTab (string tabText, int tabID)
@@ -36,9 +41,12 @@ namespace PortafolioFinal_Chat
 
 				switch (tabID) {
 				case 0:
-					e.FragmentTransaction.Replace (Resource.Id.fragmentContainer, new fragmentContactos ());
+					e.FragmentTransaction.Replace (Resource.Id.fragmentContainer, new fragmentChats ());
 					break;
 				case 1:
+					e.FragmentTransaction.Replace (Resource.Id.fragmentContainer, new fragmentContactos ());
+					break;
+				case 2:
 					e.FragmentTransaction.Replace (Resource.Id.fragmentContainer, new fragmentVentanaChat ());
 					break;
 				}

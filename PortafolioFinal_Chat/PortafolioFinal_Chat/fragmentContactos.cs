@@ -13,6 +13,11 @@ using Android.Widget;
 
 namespace PortafolioFinal_Chat
 {
+	public class variablesGlobales
+	{
+		public static string textoConversacion;
+	}
+
 	public class fragmentContactos : ListFragment 
 	{
 		public override void OnActivityCreated(Bundle savedInstanceState)
@@ -20,7 +25,10 @@ namespace PortafolioFinal_Chat
 			base.OnActivityCreated(savedInstanceState); 
 
 			var ventanaPrincipal = (VentanaPrincipal) this.Activity;
-			ventanaPrincipal.ActionBar.RemoveTabAt(1);
+
+			if (ventanaPrincipal.ActionBar.TabCount > 2) {
+				ventanaPrincipal.ActionBar.RemoveTabAt(2);
+			}
 
 			string[] values = new[] { "Cesar Ortiz", 
 									  "Francisco Payes", 
@@ -40,8 +48,11 @@ namespace PortafolioFinal_Chat
 		public override void OnListItemClick(ListView l, View v, int index, long id)
 		{
 			var ventanaPrincipal = (VentanaPrincipal) this.Activity;
-			ventanaPrincipal.AddTab ("Chats", 1);
-			ventanaPrincipal.ActionBar.SetSelectedNavigationItem(1);
+			ventanaPrincipal.AddTab ("Chat", 2);
+			ventanaPrincipal.ActionBar.SetSelectedNavigationItem(2);
+
+			variablesGlobales.textoConversacion = (string) l.GetItemAtPosition(index);
+
 		}
 	}
 }

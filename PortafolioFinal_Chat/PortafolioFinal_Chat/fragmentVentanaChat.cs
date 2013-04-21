@@ -26,7 +26,7 @@ namespace PortafolioFinal_Chat
 			var view = inflater.Inflate (Resource.Layout.fragmentVentanaChat, container, false);
 			var labelConversacion = view.FindViewById<TextView> (Resource.Id.label_Titulo);
 
-			labelConversacion.Text = "Conversando con : <Variable>";
+			labelConversacion.Text = "Conversando con : " + variablesGlobales.textoConversacion;
 
 			return view;
 		}
