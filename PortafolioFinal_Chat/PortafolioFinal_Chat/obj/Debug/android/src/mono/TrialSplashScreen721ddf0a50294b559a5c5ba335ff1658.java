@@ -12,7 +12,7 @@ import java.lang.Thread;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class TrialSplashScreendd940e32bde44b9db2815e2cd8b59c9f extends Activity {
+public class TrialSplashScreen721ddf0a50294b559a5c5ba335ff1658 extends Activity {
 	
 	private TimerTask task;
 	private Bundle initial_bundle;
@@ -32,7 +32,7 @@ public class TrialSplashScreendd940e32bde44b9db2815e2cd8b59c9f extends Activity 
 			public void run ()
 			{
 				finish ();
-				Intent intent = new Intent (TrialSplashScreendd940e32bde44b9db2815e2cd8b59c9f.this, portafoliofinal_chat.Main.class);
+				Intent intent = new Intent (TrialSplashScreen721ddf0a50294b559a5c5ba335ff1658.this, portafoliofinal_chat.Main.class);
 				intent.setFlags (Intent.FLAG_ACTIVITY_NEW_TASK);
 				startActivity (intent);
 			}

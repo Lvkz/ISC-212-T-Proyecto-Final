@@ -1,7 +1,7 @@
 package portafoliofinal_chat;
 
 
-public class Contactos
+public class VentanaPrincipal
 	extends android.app.Activity
 	implements
 		mono.android.IGCUserPeer
@@ -11,15 +11,15 @@ public class Contactos
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"";
-		mono.android.Runtime.register ("PortafolioFinal_Chat.Contactos, PortafolioFinal_Chat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", Contactos.class, __md_methods);
+		mono.android.Runtime.register ("PortafolioFinal_Chat.VentanaPrincipal, PortafolioFinal_Chat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", VentanaPrincipal.class, __md_methods);
 	}
 
 
-	public Contactos ()
+	public VentanaPrincipal ()
 	{
 		super ();
-		if (getClass () == Contactos.class)
-			mono.android.TypeManager.Activate ("PortafolioFinal_Chat.Contactos, PortafolioFinal_Chat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+		if (getClass () == VentanaPrincipal.class)
+			mono.android.TypeManager.Activate ("PortafolioFinal_Chat.VentanaPrincipal, PortafolioFinal_Chat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

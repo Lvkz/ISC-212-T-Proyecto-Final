@@ -47,8 +47,11 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Contactos.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="VentanaPrincipal.cs" />
+    <Compile Include="fragmentChats.cs" />
+    <Compile Include="fragmentContactos.cs" />
+    <Compile Include="fragmentVentanaChat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -58,9 +61,12 @@
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
-    <AndroidResource Include="Resources\layout\Contactos.axml" />
     <AndroidResource Include="Resources\anim\rotate_centre.xml" />
     <AndroidResource Include="Resources\anim\rotate_corner.axml" />
+    <AndroidResource Include="Resources\layout\VentanaPrincipal.axml" />
+    <AndroidResource Include="Resources\layout\fragmentChats.axml" />
+    <AndroidResource Include="Resources\layout\fragmentContactos.axml" />
+    <AndroidResource Include="Resources\layout\fragmentVentanaChat.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

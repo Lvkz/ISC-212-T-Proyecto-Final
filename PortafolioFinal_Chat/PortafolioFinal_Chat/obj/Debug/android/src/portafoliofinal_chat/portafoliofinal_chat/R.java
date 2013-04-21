@@ -19,17 +19,26 @@ public final class R {
         public static final int monoandroidsplash=0x7f020001;
     }
     public static final class id {
-        public static final int btn_Login=0x7f070004;
-        public static final int button1=0x7f070000;
-        public static final int linearLayout1=0x7f070003;
-        public static final int progressBarLogin=0x7f070005;
-        public static final int textboxContraseña=0x7f070002;
-        public static final int textboxNombre=0x7f070001;
+        public static final int btn_Enviar=0x7f070006;
+        public static final int btn_Login=0x7f07000a;
+        public static final int fragmentContainer=0x7f070007;
+        public static final int label_Titulo=0x7f070002;
+        public static final int linearLayout1=0x7f070004;
+        public static final int listview_Contactos=0x7f070001;
+        public static final int progressBarLogin=0x7f07000b;
+        public static final int sampleTextView=0x7f070000;
+        public static final int textboxContraseña=0x7f070009;
+        public static final int textboxNombre=0x7f070008;
+        public static final int txt_Mensaje=0x7f070005;
+        public static final int webView1=0x7f070003;
     }
     public static final class layout {
-        public static final int contactos=0x7f030000;
-        public static final int main=0x7f030001;
-        public static final int monoandroidsplash=0x7f030002;
+        public static final int fragmentchats=0x7f030000;
+        public static final int fragmentcontactos=0x7f030001;
+        public static final int fragmentventanachat=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int monoandroidsplash=0x7f030004;
+        public static final int ventanaprincipal=0x7f030005;
     }
     public static final class string {
         public static final int app_name=0x7f050001;
