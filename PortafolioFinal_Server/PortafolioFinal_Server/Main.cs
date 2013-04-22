@@ -21,7 +21,7 @@ namespace servidor
 			try
 			{
 				//Conectarme
-				Servidor = new TcpListener(IPAddress.Parse("127.0.0.1"), 6080);
+				Servidor = new TcpListener(IPAddress.Parse("172.20.10.8"), 6080);
 				Cliente = new Hashtable();
 				Servidor.Start();
 				Console.WriteLine("Servidor Conectado.....................");

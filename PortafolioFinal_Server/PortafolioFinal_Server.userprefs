@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Server_Ventana/MainWindow.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Server_Ventana\MainWindow.cs">
     <Files>
-      <File FileName="PortafolioFinal_Server/Main.cs" Line="16" Column="3" />
-      <File FileName="PortafolioFinal_Server_Ventana/MainWindow.cs" Line="22" Column="1" />
-      <File FileName="PortafolioFinal_Server_Ventana/Program.cs" Line="4" Column="1" />
+      <File FileName="PortafolioFinal_Server\Main.cs" Line="27" Column="56" />
+      <File FileName="PortafolioFinal_Server_Ventana\MainWindow.cs" Line="24" Column="3" />
+      <File FileName="PortafolioFinal_Server_Ventana\Program.cs" Line="17" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

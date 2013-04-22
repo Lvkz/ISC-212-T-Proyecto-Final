@@ -63,6 +63,13 @@
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servidor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\PortafolioFinal_Server\PortafolioFinal_Server.csproj">
+      <Project>{080D9C13-3F31-4628-BB05-76C260605992}</Project>
+      <Name>PortafolioFinal_Server</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

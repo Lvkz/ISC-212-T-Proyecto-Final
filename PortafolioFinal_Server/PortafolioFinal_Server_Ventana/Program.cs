@@ -14,6 +14,7 @@ namespace PortafolioFinal_Server_Ventana
 			MainWindow win = new MainWindow ();
 			win.Show ();
 			Application.Run ();
+
 		}
 	}
 }

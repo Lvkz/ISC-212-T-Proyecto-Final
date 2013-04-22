@@ -6,7 +6,7 @@ public partial class MainWindow
 	private global::Gtk.Fixed fixed1;
 	private global::Gtk.VBox vbox2;
 	private global::Gtk.HBox hbox2;
-	private global::Gtk.Button button1;
+	private global::Gtk.Button btn_Iniciar;
 	private global::Gtk.Button button3;
 	private global::Gtk.Label label4;
 	private global::Gtk.VBox vbox3;
@@ -44,14 +44,14 @@ public partial class MainWindow
 		this.hbox2.Homogeneous = true;
 		this.hbox2.Spacing = 6;
 		// Container child hbox2.Gtk.Box+BoxChild
-		this.button1 = new global::Gtk.Button ();
-		this.button1.WidthRequest = 105;
-		this.button1.CanFocus = true;
-		this.button1.Name = "button1";
-		this.button1.UseUnderline = true;
-		this.button1.Label = global::Mono.Unix.Catalog.GetString ("Iniciar Servidor");
-		this.hbox2.Add (this.button1);
-		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.button1]));
+		this.btn_Iniciar = new global::Gtk.Button ();
+		this.btn_Iniciar.WidthRequest = 105;
+		this.btn_Iniciar.CanFocus = true;
+		this.btn_Iniciar.Name = "btn_Iniciar";
+		this.btn_Iniciar.UseUnderline = true;
+		this.btn_Iniciar.Label = global::Mono.Unix.Catalog.GetString ("Iniciar Servidor");
+		this.hbox2.Add (this.btn_Iniciar);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.btn_Iniciar]));
 		w1.Position = 0;
 		w1.Expand = false;
 		w1.Fill = false;
@@ -186,6 +186,7 @@ public partial class MainWindow
 		this.DefaultHeight = 460;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
+		this.btn_Iniciar.Clicked += new global::System.EventHandler (this.btn_Iniciar_Clicked);
 		this.btnCerrar.Clicked += new global::System.EventHandler (this.btnCerrar_Clicked);
 	}
 }

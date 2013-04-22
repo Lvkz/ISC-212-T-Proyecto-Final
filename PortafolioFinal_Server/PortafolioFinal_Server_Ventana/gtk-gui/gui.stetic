@@ -28,13 +28,14 @@
                 <property name="Homogeneous">True</property>
                 <property name="Spacing">6</property>
                 <child>
-                  <widget class="Gtk.Button" id="button1">
+                  <widget class="Gtk.Button" id="btn_Iniciar">
                     <property name="MemberName" />
                     <property name="WidthRequest">105</property>
                     <property name="CanFocus">True</property>
                     <property name="Type">TextOnly</property>
                     <property name="Label" translatable="yes">Iniciar Servidor</property>
                     <property name="UseUnderline">True</property>
+                    <signal name="Clicked" handler="btn_Iniciar_Clicked" />
                   </widget>
                   <packing>
                     <property name="Position">0</property>

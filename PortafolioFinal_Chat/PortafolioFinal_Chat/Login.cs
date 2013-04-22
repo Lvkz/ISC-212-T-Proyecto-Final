@@ -29,35 +29,39 @@ namespace PortafolioFinal_Chat
 			};
 
 			//Colocar Código Debajo de Esta Línea.		
-//			TcpClient Cliente;
-//			NetworkStream StreamCliente;
-//			string mensaje;
-//			btnLogin.Click += delegate {
-//				try
-//				{
-//					Cliente = new TcpClient("127.0.0.1", 6080);
-//					StreamCliente = Cliente.GetStream();
-//					byte[] data = Encoding.ASCII.GetBytes("Cesar");
-//					StreamCliente.Write(data, 0, data.Length);
-//					StreamCliente.Flush();
-//					mensaje = "Conectando Con el Servidor";
-//					//Mensaje_REcivido();
-//					//Thread Hilo = new Thread(Recivir_Mensaje);
-//					//Hilo.Start();
-//					
-//				}
-//				catch 
-//				{
-//					mensaje=("Error Al conectar");
-//				}
-//
-//				btnLogin.Text=mensaje;
-//
-//			};
-//
-//			btnReset.Click += delegate {
-//				btnLogin.Text = "Entrar";
-//			};
+			TcpClient Cliente;
+			NetworkStream StreamCliente;
+			string mensaje;
+			btnLogin.Click += delegate {
+				try
+				{
+					Cliente = new TcpClient("172.20.10.4", 6080);
+
+					StreamCliente = Cliente.GetStream();
+
+					byte[] data = Encoding.ASCII.GetBytes("Cesar");
+
+					StreamCliente.Write(data, 0, data.Length);
+
+					StreamCliente.Flush();
+
+					mensaje = "Conectando Con el Servidor";
+
+					//Mensaje_REcivido();
+					//Thread Hilo = new Thread(Recivir_Mensaje);
+					//Hilo.Start();
+
+				}
+				catch 
+				{
+					mensaje=("Error Al conectar");
+				}
+
+				btnLogin.Text=mensaje;
+
+			};
+
+		
 		}
 	}			
 }
