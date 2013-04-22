@@ -49,9 +49,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="VentanaPrincipal.cs" />
-    <Compile Include="fragmentChats.cs" />
     <Compile Include="fragmentContactos.cs" />
     <Compile Include="fragmentVentanaChat.cs" />
+    <Compile Include="fragmentSalasChat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
