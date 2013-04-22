@@ -13,6 +13,7 @@ namespace servidor
 	{
 		static TcpListener Servidor;
 		static Hashtable Cliente;
+
 		static void Main(string[] args)
 		{
 			

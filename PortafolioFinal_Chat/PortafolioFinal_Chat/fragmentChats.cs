@@ -14,17 +14,34 @@ using Android.Widget;
 
 namespace PortafolioFinal_Chat
 {
-	public class fragmentChats : Fragment
+	public class fragmentChats : ListFragment
 	{
-		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		public override void OnActivityCreated(Bundle savedInstanceState)
 		{
-			base.OnCreateView (inflater, container, savedInstanceState);
+			base.OnActivityCreated(savedInstanceState); 
 			
-			var view = inflater.Inflate (Resource.Layout.fragmentChats, container, false);
-			var sampleTextView = view.FindViewById<TextView> (Resource.Id.sampleTextView);             
-			sampleTextView.Text = "TAB DE CHATS!!";
+			var ventanaPrincipal = (VentanaPrincipal) this.Activity;
+
+			if (ventanaPrincipal.ActionBar.TabCount > 2) {
+				ventanaPrincipal.ActionBar.RemoveTabAt(2);
+			}
 			
-			return view;
+			string[] values = new[] { "Sala Tecnología",
+									  "Sala Música", 
+									  "Sala Deportes",
+									  "Sala Prueba",};
+			
+			this.ListAdapter = new ArrayAdapter<string>(Activity, Android.Resource.Layout.SimpleExpandableListItem1, values);
+		}
+
+		public override void OnListItemClick(ListView l, View v, int index, long id)
+		{
+			var ventanaPrincipal = (VentanaPrincipal) this.Activity;
+			ventanaPrincipal.AddTab ("Chat", 2);
+			ventanaPrincipal.ActionBar.SetSelectedNavigationItem(2);
+			
+			variablesGlobales.textoConversacion = (string) l.GetItemAtPosition(index);
+			
 		}
 	}
 }
