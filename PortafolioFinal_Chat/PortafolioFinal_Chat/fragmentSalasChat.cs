@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace PortafolioFinal_Chat
 {
-	public class fragmentChats : ListFragment
+	public class fragmentSalasChat : ListFragment
 	{
 		public override void OnActivityCreated(Bundle savedInstanceState)
 		{

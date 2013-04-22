@@ -141,7 +141,7 @@ namespace PortafolioFinal_Chat
 			public const int fragmentVentanaChat = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Main = 2130903043;
+			public const int Login = 2130903043;
 			
 			// aapt resource value: 0x7f030004
 			public const int monoandroidsplash = 2130903044;
@@ -167,6 +167,9 @@ namespace PortafolioFinal_Chat
 			
 			// aapt resource value: 0x7f050000
 			public const int hello = 2131034112;
+			
+			// aapt resource value: 0x7f050002
+			public const int menu_insert = 2131034114;
 			
 			static String()
 			{

@@ -13,26 +13,20 @@ using Android.OS;
 
 namespace PortafolioFinal_Chat
 {
-	[Activity (Label = "Login", MainLauncher = true)]
-	public class Main : Activity
+	[Activity (Label = "@string/app_name", MainLauncher = true)]
+	public class Login : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
-			SetContentView (Resource.Layout.Main);
+			base.OnCreate (bundle);	
+			SetContentView (Resource.Layout.Login);
 
-			// Set our view from the "main" layout resource
-
-			//Button btnLogin = FindViewById<Button> (Resource.Id.btn_Login);
 			Button btnLogin = FindViewById<Button> (Resource.Id.btn_Login);
 
 
 			btnLogin.Click += (sender, e) => {
 				StartActivity(typeof(VentanaPrincipal));
 			};
-
-			// Get our button from the layout resource,
-			// and attach an event to it
 
 			//Colocar Código Debajo de Esta Línea.		
 //			TcpClient Cliente;

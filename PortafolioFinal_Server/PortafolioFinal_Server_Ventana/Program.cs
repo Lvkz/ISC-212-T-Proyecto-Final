@@ -1,4 +1,7 @@
 using System;
+using System.Net;
+using System.Net.Sockets;
+
 using Gtk;
 
 namespace PortafolioFinal_Server_Ventana

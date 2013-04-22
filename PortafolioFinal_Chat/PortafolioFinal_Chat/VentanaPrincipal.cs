@@ -15,6 +15,9 @@ namespace PortafolioFinal_Chat
 	[Activity (Label="@string/app_name")]
 	public class VentanaPrincipal : Activity
 	{
+		private const int InsertId = Menu.First;
+		private const int DeleteId = Menu.First + 1;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -31,6 +34,14 @@ namespace PortafolioFinal_Chat
 			}
 		}
 
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			base.OnCreateOptionsMenu(menu);
+			menu.Add(0, InsertId, 0, Resource.String.menu_insert);
+			
+			return true;
+		}
+
 		public  void AddTab (string tabText, int tabID)
 		{
 			var tab = this.ActionBar.NewTab ();            
@@ -41,7 +52,7 @@ namespace PortafolioFinal_Chat
 
 				switch (tabID) {
 				case 0:
-					e.FragmentTransaction.Replace (Resource.Id.fragmentContainer, new fragmentChats ());
+					e.FragmentTransaction.Replace (Resource.Id.fragmentContainer, new fragmentSalasChat ());
 					break;
 				case 1:
 					e.FragmentTransaction.Replace (Resource.Id.fragmentContainer, new fragmentContactos ());

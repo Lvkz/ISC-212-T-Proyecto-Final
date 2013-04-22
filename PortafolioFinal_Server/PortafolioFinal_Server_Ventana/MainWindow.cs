@@ -13,4 +13,9 @@ public partial class MainWindow: Gtk.Window
 		Application.Quit ();
 		a.RetVal = true;
 	}
+
+	protected void btnCerrar_Clicked (object sender, EventArgs e)
+	{
+		Gtk.Main.Quit();
+	}
 }
