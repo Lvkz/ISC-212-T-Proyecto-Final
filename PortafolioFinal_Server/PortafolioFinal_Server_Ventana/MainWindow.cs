@@ -32,12 +32,9 @@ public partial class MainWindow: Gtk.Window
 
 	protected void btn_Iniciar_Clicked (object sender, EventArgs e)
 	{
-<<<<<<< HEAD
 		btn_Iniciar1.IsFocus= false;
 		Program_servidor Servidor = new Program_servidor();
-=======
 		Servidor = new Program_Servidor();
->>>>>>> Cambio Ventana Servidor - Versión Final
 		HiloServidor = new Thread(Servidor.ClaseServidor);
 		HiloServidor.Start();
 

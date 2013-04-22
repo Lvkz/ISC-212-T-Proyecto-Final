@@ -1,17 +1,9 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Server_Ventana\MainWindow.cs">
-    <Files>
-      <File FileName="PortafolioFinal_Server_Ventana\MainWindow.cs" Line="8" Column="3" />
-      <File FileName="PortafolioFinal_Server_Ventana\Program.cs" Line="13" Column="24" />
-      <File FileName="PortafolioFinal_Server_Ventana\Servidor.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Server_Ventana/MainWindow.cs">
     <Files>
-      <File FileName="PortafolioFinal_Server_Ventana/MainWindow.cs" Line="48" Column="12" />
->>>>>>> Cambio Ventana Servidor - Versión Final
+      <File FileName="PortafolioFinal_Server_Ventana/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="PortafolioFinal_Server_Ventana/Servidor.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
