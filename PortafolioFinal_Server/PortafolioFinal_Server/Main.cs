@@ -21,7 +21,11 @@ namespace servidor
 			try
 			{
 				//Conectarme
+<<<<<<< HEAD
 				Servidor = new TcpListener(IPAddress.Parse("172.20.10.8"), 6080);
+=======
+				Servidor = new TcpListener(IPAddress.Parse("172.20.10.4"), 6080);
+>>>>>>> Mejoras Chat - Android
 				Cliente = new Hashtable();
 				Servidor.Start();
 				Console.WriteLine("Servidor Conectado.....................");

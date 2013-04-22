@@ -16,6 +16,11 @@ namespace PortafolioFinal_Chat
 	[Activity (Label = "@string/app_name", MainLauncher = true)]
 	public class Login : Activity
 	{
+		public TcpClient Cliente;
+		public NetworkStream StreamCliente;
+		public string infoMensaje;
+		public bool verificacion;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);	
@@ -25,9 +30,21 @@ namespace PortafolioFinal_Chat
 
 
 			btnLogin.Click += (sender, e) => {
-				StartActivity(typeof(VentanaPrincipal));
-			};
+				
+				try
+				{
+					Cliente = new TcpClient("172.20.10.4", 6080);
+					StreamCliente = Cliente.GetStream();
 
+					byte[] data = Encoding.ASCII.GetBytes("Lukas");
+					StreamCliente.Write(data, 0, data.Length);
+					StreamCliente.Flush();
+
+					infoMensaje = "Conectando Con el Servidor";
+					verificacion = true;
+				}
+
+<<<<<<< HEAD
 			//Colocar Código Debajo de Esta Línea.		
 			TcpClient Cliente;
 			NetworkStream StreamCliente;
@@ -62,6 +79,35 @@ namespace PortafolioFinal_Chat
 			};
 
 		
+=======
+				catch 
+				{
+					infoMensaje=("Error Al conectar");
+					verificacion = false;
+				}
+
+				finally
+				{
+					Console.WriteLine(infoMensaje);
+				}
+
+				if (verificacion)
+				{
+					StartActivity(typeof(VentanaPrincipal));
+				}
+				else
+				{
+					RunOnUiThread(() => {
+						AlertDialog.Builder builder = new AlertDialog.Builder(this);
+						builder.SetTitle("Aviso");
+						builder.SetMessage(infoMensaje);
+						builder.SetCancelable(false);
+						builder.SetPositiveButton("OK", delegate { });
+						builder.Show();
+					});
+				}				
+			};
+>>>>>>> Mejoras Chat - Android
 		}
 	}			
 }

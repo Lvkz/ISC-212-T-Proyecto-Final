@@ -17,7 +17,7 @@ public partial class MainWindow
 	private global::Gtk.Label label3;
 	private global::Gtk.ScrolledWindow GtkScrolledWindow1;
 	private global::Gtk.TextView textview2;
-	private global::Gtk.HBox hbox4;
+	private global::Gtk.HBox textview1;
 	private global::Gtk.Button button4;
 	private global::Gtk.Button btnCerrar;
 	
@@ -139,9 +139,9 @@ public partial class MainWindow
 		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.GtkScrolledWindow1]));
 		w11.Position = 1;
 		// Container child vbox4.Gtk.Box+BoxChild
-		this.hbox4 = new global::Gtk.HBox ();
-		this.hbox4.Name = "hbox4";
-		this.hbox4.Spacing = 6;
+		this.textview1 = new global::Gtk.HBox ();
+		this.textview1.Name = "hbox4";
+		this.textview1.Spacing = 6;
 		// Container child hbox4.Gtk.Box+BoxChild
 		this.button4 = new global::Gtk.Button ();
 		this.button4.WidthRequest = 105;
@@ -149,8 +149,8 @@ public partial class MainWindow
 		this.button4.Name = "button4";
 		this.button4.UseUnderline = true;
 		this.button4.Label = global::Mono.Unix.Catalog.GetString ("Enviar Mensaje");
-		this.hbox4.Add (this.button4);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.button4]));
+		this.textview1.Add (this.button4);
+		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.textview1 [this.button4]));
 		w12.Position = 0;
 		w12.Expand = false;
 		w12.Fill = false;
@@ -161,13 +161,13 @@ public partial class MainWindow
 		this.btnCerrar.Name = "btnCerrar";
 		this.btnCerrar.UseUnderline = true;
 		this.btnCerrar.Label = global::Mono.Unix.Catalog.GetString ("Cerrar Conexión");
-		this.hbox4.Add (this.btnCerrar);
-		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.btnCerrar]));
+		this.textview1.Add (this.btnCerrar);
+		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.textview1 [this.btnCerrar]));
 		w13.Position = 1;
 		w13.Expand = false;
 		w13.Fill = false;
-		this.vbox4.Add (this.hbox4);
-		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.hbox4]));
+		this.vbox4.Add (this.textview1);
+		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.textview1]));
 		w14.Position = 2;
 		w14.Expand = false;
 		w14.Fill = false;

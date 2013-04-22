@@ -21,6 +21,6 @@ Global
 		{4C914610-F2B1-4A7C-AA6F-DB043685C572}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = PortafolioFinal_Server_Ventana\PortafolioFinal_Server_Ventana.csproj
+		StartupItem = PortafolioFinal_Server\PortafolioFinal_Server.csproj
 	EndGlobalSection
 EndGlobal

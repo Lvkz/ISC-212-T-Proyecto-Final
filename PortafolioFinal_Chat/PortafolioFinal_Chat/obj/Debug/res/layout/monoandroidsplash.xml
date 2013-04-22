@@ -1,5 +1,9 @@
 <LinearLayout android:layout_width="251pt" android:layout_height="440pt" android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"><!--
     <TextView
         android:layout_width="fill_parent" android:layout_height="wrap_content"
+<<<<<<< HEAD
 		android:text="Xamarin Android trial mode, expires on 2013/04/23 13:43." />
+=======
+		android:text="Xamarin Android trial mode, expires on 2013/04/23 14:01." />
+>>>>>>> Mejoras Chat - Android
 		--></LinearLayout>
