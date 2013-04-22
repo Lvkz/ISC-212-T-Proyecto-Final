@@ -29,7 +29,7 @@ public partial class MainWindow: Gtk.Window
 
 	protected void btn_Iniciar_Clicked (object sender, EventArgs e)
 	{
-
+		btn_Iniciar1.IsFocus= false;
 		Program_servidor Servidor = new Program_servidor();
 		HiloServidor = new Thread(Servidor.ClaseServidor);
 		HiloServidor.Start();

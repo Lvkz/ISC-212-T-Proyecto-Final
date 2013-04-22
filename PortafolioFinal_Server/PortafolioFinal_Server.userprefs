@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Server_Ventana\MainWindow.cs">
+    <Files>
+      <File FileName="PortafolioFinal_Server_Ventana\MainWindow.cs" Line="8" Column="3" />
+      <File FileName="PortafolioFinal_Server_Ventana\Program.cs" Line="13" Column="24" />
+      <File FileName="PortafolioFinal_Server_Ventana\Servidor.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

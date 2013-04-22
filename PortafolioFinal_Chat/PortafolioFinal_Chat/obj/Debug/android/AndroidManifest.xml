@@ -11,11 +11,7 @@
         <category android:name="mono.android.intent.category.SEPPUKU.PortafolioFinal_Chat.PortafolioFinal_Chat" />
       </intent-filter>
     </receiver>
-<<<<<<< HEAD
-    <activity android:label="@string/app_name" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreen56edf0cc69b940dcab1395f16df441cb" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
-=======
-    <activity android:label="@string/app_name" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreen6450b683fe864b5ea7241cc4046a200f" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
->>>>>>> Mejoras Chat - Android
+    <activity android:label="@string/app_name" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreenb33c2c9bec154e5091beb8ff2b5147e2" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
