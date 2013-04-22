@@ -9,24 +9,22 @@ using System.Collections;
 
 namespace PortafolioFinal_Server_Ventana
 {
-	public class Program_Servidor
+	public class Program_servidor
 	{
 		static TcpListener Servidor;
 		static Hashtable Cliente;
-		public static bool conexionExitosa;
 		public static bool Ciclos =true;
-
 		public void ClaseServidor()
-		{			
+		{
+			
 			String MensajeCliente;
 			try
 			{
 				//Conectarme
-				Servidor = new TcpListener(IPAddress.Parse("10.0.0.85"), 6080);
+				Servidor = new TcpListener(IPAddress.Parse("172.20.10.8"), 6080);
 				Cliente = new Hashtable();
 				Servidor.Start();
 				Console.WriteLine("Servidor Conectado.....................");
-				conexionExitosa = true;
 				
 				while (Ciclos)
 				{
@@ -44,14 +42,13 @@ namespace PortafolioFinal_Server_Ventana
 					
 					
 					//ciclo infinito 
-					MetodosMensajes nuevo = new MetodosMensajes(MensajeCliente, Cliente);
+					chatiar nuevo = new chatiar(MensajeCliente, Clinte);
 				}
 			}
 			catch
 			{
 				
 				Console.WriteLine("Error");
-				conexionExitosa = false;
 				
 			}
 			finally {
@@ -60,7 +57,6 @@ namespace PortafolioFinal_Server_Ventana
 
 			
 		}
-
 		public static void   msj_Todos(String Mensaje,String Nombre)
 		{
 			
@@ -76,31 +72,27 @@ namespace PortafolioFinal_Server_Ventana
 				
 			}
 		}
-
 		public static void CerrarServidor()
 		{
 			Ciclos=false;
-			MetodosMensajes.Cerrar_Hilos();
+			chatiar.Cerrar_Hilos();
 		}
 	}
 
-	public class MetodosMensajes 
+	class chatiar 
 	{
 		public static Thread hilo_chatiando;
 		public static bool Ciclos =true;
-
 		String nombre;
 		TcpClient Clienteclase;
-
-		public MetodosMensajes(String nombres, TcpClient Clienteclases)
+		public chatiar(String nombres, TcpClient Clienteclases)
 		{
 			nombre = nombres;
 			Clienteclase = Clienteclases;
-			hilo_chatiando = new Thread(chatiando);
-			hilo_chatiando.Start();
+			 hilo_chatiando = new Thread(chatiando);
+				hilo_chatiando.Start();
 			
 		}
-
 		public void chatiando() 
 		{
 			String MensajeCliente;
@@ -115,17 +107,18 @@ namespace PortafolioFinal_Server_Ventana
 				MensajeCliente = Encoding.ASCII.GetString(msj_en_Byte, 0, msj_en_Byte.Length);
 				
 				//msj enviar todos los clientes
-				Program_Servidor.msj_Todos(MensajeCliente,nombre);
+				Program_servidor.msj_Todos(MensajeCliente,nombre);
 				//ciclo infinito 
 				
 			}
-
+			
 		}
-
 		public static void Cerrar_Hilos()
 		{
 			hilo_chatiando.Abort();
 			Ciclos=false;
 		}
+		
+		
 	}
 }
