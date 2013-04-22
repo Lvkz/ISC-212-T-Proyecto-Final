@@ -4,31 +4,36 @@
 public partial class MainWindow
 {
 	private global::Gtk.Fixed fixed1;
-	private global::Gtk.VBox vbox5;
-	private global::Gtk.VBox vbox6;
-	private global::Gtk.HBox hbox3;
-	private global::Gtk.Button btn_Iniciar1;
-	private global::Gtk.Button button5;
-	private global::Gtk.Label label5;
-	private global::Gtk.HSeparator hseparator1;
-	private global::Gtk.VBox vbox7;
-	private global::Gtk.Label label1;
-	private global::Gtk.ScrolledWindow GtkScrolledWindow2;
-	private global::Gtk.TextView textview3;
+	private global::Gtk.VBox ContenedorVentana;
+	private global::Gtk.VBox ContenedorSuperior;
+	private global::Gtk.Label TituloVentana;
+	private global::Gtk.HBox Grupo1;
+	private global::Gtk.Label labelAccioneServidor;
 	private global::Gtk.HSeparator hseparator2;
-	private global::Gtk.VBox vbox8;
-	private global::Gtk.HBox hbox5;
-	private global::Gtk.VBox vbox9;
-	private global::Gtk.Label label6;
-	private global::Gtk.ScrolledWindow GtkScrolledWindow3;
-	private global::Gtk.TextView textview4;
-	private global::Gtk.Button button6;
-	private global::Gtk.VSeparator vseparator1;
-	private global::Gtk.VBox vbox11;
-	private global::Gtk.Label label7;
-	private global::Gtk.ScrolledWindow GtkScrolledWindow4;
-	private global::Gtk.TextView textview5;
-	private global::Gtk.Button btnCerrar1;
+	private global::Gtk.HBox ContenedorBotones;
+	private global::Gtk.Button btnIniciar;
+	private global::Gtk.Button btnTerminar;
+	private global::Gtk.Label labelEstadoServidor;
+	private global::Gtk.VBox ContenedorMedio;
+	private global::Gtk.HBox Grupo2;
+	private global::Gtk.Label labelRegistro;
+	private global::Gtk.HSeparator hseparator3;
+	private global::Gtk.VBox RegistroEventos;
+	private global::Gtk.ScrolledWindow GtkScrolledWindow;
+	private global::Gtk.TextView textviewRegistro;
+	private global::Gtk.VBox ContenedorMensajes;
+	private global::Gtk.HBox hbox10;
+	private global::Gtk.Label label8;
+	private global::Gtk.HSeparator hseparator4;
+	private global::Gtk.ScrolledWindow GtkScrolledWindow1;
+	private global::Gtk.TextView textviewMensajes;
+	private global::Gtk.HBox hbox11;
+	private global::Gtk.Entry entry1;
+	private global::Gtk.Button btnEnviar;
+	private global::Gtk.VBox vbox53;
+	private global::Gtk.HSeparator hseparator5;
+	private global::Gtk.Button btnCerrar;
+	private global::Gtk.Label labelCreditos;
 	
 	protected virtual void Build ()
 	{
@@ -41,236 +46,284 @@ public partial class MainWindow
 		this.WindowPosition = ((global::Gtk.WindowPosition)(1));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.fixed1 = new global::Gtk.Fixed ();
-		this.fixed1.WidthRequest = 400;
 		this.fixed1.HeightRequest = 0;
 		this.fixed1.Name = "fixed1";
 		this.fixed1.HasWindow = false;
 		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.vbox5 = new global::Gtk.VBox ();
-		this.vbox5.WidthRequest = 505;
-		this.vbox5.Name = "vbox5";
-		this.vbox5.Spacing = 6;
-		// Container child vbox5.Gtk.Box+BoxChild
-		this.vbox6 = new global::Gtk.VBox ();
-		this.vbox6.WidthRequest = 400;
-		this.vbox6.Name = "vbox6";
-		this.vbox6.Spacing = 6;
-		// Container child vbox6.Gtk.Box+BoxChild
-		this.hbox3 = new global::Gtk.HBox ();
-		this.hbox3.Name = "hbox3";
-		this.hbox3.Spacing = 6;
-		// Container child hbox3.Gtk.Box+BoxChild
-		this.btn_Iniciar1 = new global::Gtk.Button ();
-		this.btn_Iniciar1.WidthRequest = 250;
-		this.btn_Iniciar1.CanFocus = true;
-		this.btn_Iniciar1.Name = "btn_Iniciar1";
-		this.btn_Iniciar1.UseUnderline = true;
-		this.btn_Iniciar1.Label = global::Mono.Unix.Catalog.GetString ("Iniciar Servidor");
-		this.hbox3.Add (this.btn_Iniciar1);
-		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.btn_Iniciar1]));
+		this.ContenedorVentana = new global::Gtk.VBox ();
+		this.ContenedorVentana.WidthRequest = 505;
+		this.ContenedorVentana.Name = "ContenedorVentana";
+		this.ContenedorVentana.Spacing = 6;
+		// Container child ContenedorVentana.Gtk.Box+BoxChild
+		this.ContenedorSuperior = new global::Gtk.VBox ();
+		this.ContenedorSuperior.Name = "ContenedorSuperior";
+		this.ContenedorSuperior.Spacing = 6;
+		// Container child ContenedorSuperior.Gtk.Box+BoxChild
+		this.TituloVentana = new global::Gtk.Label ();
+		this.TituloVentana.Name = "TituloVentana";
+		this.TituloVentana.LabelProp = global::Mono.Unix.Catalog.GetString ("Modulo Administración Chat - Programación 1");
+		this.TituloVentana.UseMarkup = true;
+		this.ContenedorSuperior.Add (this.TituloVentana);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.ContenedorSuperior [this.TituloVentana]));
 		w1.Position = 0;
 		w1.Expand = false;
 		w1.Fill = false;
-		// Container child hbox3.Gtk.Box+BoxChild
-		this.button5 = new global::Gtk.Button ();
-		this.button5.WidthRequest = 250;
-		this.button5.CanFocus = true;
-		this.button5.Name = "button5";
-		this.button5.UseUnderline = true;
-		this.button5.Label = global::Mono.Unix.Catalog.GetString ("Escuchar");
-		this.hbox3.Add (this.button5);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.button5]));
-		w2.Position = 1;
+		// Container child ContenedorSuperior.Gtk.Box+BoxChild
+		this.Grupo1 = new global::Gtk.HBox ();
+		this.Grupo1.Name = "Grupo1";
+		this.Grupo1.Spacing = 6;
+		// Container child Grupo1.Gtk.Box+BoxChild
+		this.labelAccioneServidor = new global::Gtk.Label ();
+		this.labelAccioneServidor.WidthRequest = 130;
+		this.labelAccioneServidor.Name = "labelAccioneServidor";
+		this.labelAccioneServidor.LabelProp = global::Mono.Unix.Catalog.GetString ("Acciones Servidor:");
+		this.labelAccioneServidor.UseMarkup = true;
+		this.Grupo1.Add (this.labelAccioneServidor);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.Grupo1 [this.labelAccioneServidor]));
+		w2.Position = 0;
 		w2.Expand = false;
 		w2.Fill = false;
-		this.vbox6.Add (this.hbox3);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.hbox3]));
-		w3.Position = 0;
-		w3.Expand = false;
-		w3.Fill = false;
-		// Container child vbox6.Gtk.Box+BoxChild
-		this.label5 = new global::Gtk.Label ();
-		this.label5.WidthRequest = 256;
-		this.label5.Name = "label5";
-		this.label5.Xalign = 1F;
-		this.label5.LabelProp = global::Mono.Unix.Catalog.GetString ("Estado del Servidor: ");
-		this.label5.Justify = ((global::Gtk.Justification)(2));
-		this.vbox6.Add (this.label5);
-		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.label5]));
+		// Container child Grupo1.Gtk.Box+BoxChild
+		this.hseparator2 = new global::Gtk.HSeparator ();
+		this.hseparator2.Name = "hseparator2";
+		this.Grupo1.Add (this.hseparator2);
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.Grupo1 [this.hseparator2]));
+		w3.Position = 1;
+		this.ContenedorSuperior.Add (this.Grupo1);
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.ContenedorSuperior [this.Grupo1]));
 		w4.Position = 1;
 		w4.Expand = false;
 		w4.Fill = false;
-		// Container child vbox6.Gtk.Box+BoxChild
-		this.hseparator1 = new global::Gtk.HSeparator ();
-		this.hseparator1.Name = "hseparator1";
-		this.vbox6.Add (this.hseparator1);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.hseparator1]));
-		w5.Position = 2;
+		// Container child ContenedorSuperior.Gtk.Box+BoxChild
+		this.ContenedorBotones = new global::Gtk.HBox ();
+		this.ContenedorBotones.Name = "ContenedorBotones";
+		this.ContenedorBotones.Spacing = 6;
+		// Container child ContenedorBotones.Gtk.Box+BoxChild
+		this.btnIniciar = new global::Gtk.Button ();
+		this.btnIniciar.WidthRequest = 165;
+		this.btnIniciar.CanFocus = true;
+		this.btnIniciar.Name = "btnIniciar";
+		this.btnIniciar.UseUnderline = true;
+		this.btnIniciar.Label = global::Mono.Unix.Catalog.GetString ("Iniciar Servidor");
+		this.ContenedorBotones.Add (this.btnIniciar);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.ContenedorBotones [this.btnIniciar]));
+		w5.Position = 0;
 		w5.Expand = false;
 		w5.Fill = false;
-		this.vbox5.Add (this.vbox6);
-		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.vbox6]));
-		w6.Position = 0;
+		// Container child ContenedorBotones.Gtk.Box+BoxChild
+		this.btnTerminar = new global::Gtk.Button ();
+		this.btnTerminar.WidthRequest = 165;
+		this.btnTerminar.CanFocus = true;
+		this.btnTerminar.Name = "btnTerminar";
+		this.btnTerminar.UseUnderline = true;
+		this.btnTerminar.Label = global::Mono.Unix.Catalog.GetString ("Terminar Servidor");
+		this.ContenedorBotones.Add (this.btnTerminar);
+		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.ContenedorBotones [this.btnTerminar]));
+		w6.Position = 1;
 		w6.Expand = false;
 		w6.Fill = false;
-		// Container child vbox5.Gtk.Box+BoxChild
-		this.vbox7 = new global::Gtk.VBox ();
-		this.vbox7.Name = "vbox7";
-		this.vbox7.Spacing = 6;
-		// Container child vbox7.Gtk.Box+BoxChild
-		this.label1 = new global::Gtk.Label ();
-		this.label1.Name = "label1";
-		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Registro de Actividades");
-		this.vbox7.Add (this.label1);
-		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.label1]));
-		w7.Position = 0;
+		// Container child ContenedorBotones.Gtk.Box+BoxChild
+		this.labelEstadoServidor = new global::Gtk.Label ();
+		this.labelEstadoServidor.WidthRequest = 165;
+		this.labelEstadoServidor.Name = "labelEstadoServidor";
+		this.labelEstadoServidor.Xalign = 1F;
+		this.labelEstadoServidor.LabelProp = global::Mono.Unix.Catalog.GetString ("Estado del Servidor: ");
+		this.labelEstadoServidor.UseMarkup = true;
+		this.labelEstadoServidor.Justify = ((global::Gtk.Justification)(2));
+		this.ContenedorBotones.Add (this.labelEstadoServidor);
+		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.ContenedorBotones [this.labelEstadoServidor]));
+		w7.Position = 2;
 		w7.Expand = false;
 		w7.Fill = false;
-		// Container child vbox7.Gtk.Box+BoxChild
-		this.GtkScrolledWindow2 = new global::Gtk.ScrolledWindow ();
-		this.GtkScrolledWindow2.Name = "GtkScrolledWindow2";
-		this.GtkScrolledWindow2.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child GtkScrolledWindow2.Gtk.Container+ContainerChild
-		this.textview3 = new global::Gtk.TextView ();
-		this.textview3.CanFocus = true;
-		this.textview3.Name = "textview3";
-		this.GtkScrolledWindow2.Add (this.textview3);
-		this.vbox7.Add (this.GtkScrolledWindow2);
-		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.GtkScrolledWindow2]));
-		w9.Position = 1;
-		// Container child vbox7.Gtk.Box+BoxChild
-		this.hseparator2 = new global::Gtk.HSeparator ();
-		this.hseparator2.Name = "hseparator2";
-		this.vbox7.Add (this.hseparator2);
-		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.hseparator2]));
-		w10.Position = 2;
+		this.ContenedorSuperior.Add (this.ContenedorBotones);
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.ContenedorSuperior [this.ContenedorBotones]));
+		w8.Position = 2;
+		w8.Expand = false;
+		w8.Fill = false;
+		this.ContenedorVentana.Add (this.ContenedorSuperior);
+		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.ContenedorVentana [this.ContenedorSuperior]));
+		w9.Position = 0;
+		w9.Expand = false;
+		w9.Fill = false;
+		// Container child ContenedorVentana.Gtk.Box+BoxChild
+		this.ContenedorMedio = new global::Gtk.VBox ();
+		this.ContenedorMedio.HeightRequest = 315;
+		this.ContenedorMedio.Name = "ContenedorMedio";
+		this.ContenedorMedio.Spacing = 6;
+		// Container child ContenedorMedio.Gtk.Box+BoxChild
+		this.Grupo2 = new global::Gtk.HBox ();
+		this.Grupo2.Name = "Grupo2";
+		this.Grupo2.Spacing = 6;
+		// Container child Grupo2.Gtk.Box+BoxChild
+		this.labelRegistro = new global::Gtk.Label ();
+		this.labelRegistro.WidthRequest = 130;
+		this.labelRegistro.Name = "labelRegistro";
+		this.labelRegistro.LabelProp = global::Mono.Unix.Catalog.GetString ("Registro Actividades:");
+		this.labelRegistro.UseMarkup = true;
+		this.Grupo2.Add (this.labelRegistro);
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.Grupo2 [this.labelRegistro]));
+		w10.Position = 0;
 		w10.Expand = false;
 		w10.Fill = false;
-		this.vbox5.Add (this.vbox7);
-		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.vbox7]));
+		// Container child Grupo2.Gtk.Box+BoxChild
+		this.hseparator3 = new global::Gtk.HSeparator ();
+		this.hseparator3.Name = "hseparator3";
+		this.Grupo2.Add (this.hseparator3);
+		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.Grupo2 [this.hseparator3]));
 		w11.Position = 1;
-		// Container child vbox5.Gtk.Box+BoxChild
-		this.vbox8 = new global::Gtk.VBox ();
-		this.vbox8.Name = "vbox8";
-		this.vbox8.Spacing = 6;
-		// Container child vbox8.Gtk.Box+BoxChild
-		this.hbox5 = new global::Gtk.HBox ();
-		this.hbox5.Name = "hbox5";
-		this.hbox5.Spacing = 6;
-		// Container child hbox5.Gtk.Box+BoxChild
-		this.vbox9 = new global::Gtk.VBox ();
-		this.vbox9.WidthRequest = 245;
-		this.vbox9.HeightRequest = 235;
-		this.vbox9.Name = "vbox9";
-		this.vbox9.Spacing = 6;
-		// Container child vbox9.Gtk.Box+BoxChild
-		this.label6 = new global::Gtk.Label ();
-		this.label6.Name = "label6";
-		this.label6.LabelProp = global::Mono.Unix.Catalog.GetString ("Mensaje a Cliente:");
-		this.vbox9.Add (this.label6);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox9 [this.label6]));
+		this.ContenedorMedio.Add (this.Grupo2);
+		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.ContenedorMedio [this.Grupo2]));
 		w12.Position = 0;
 		w12.Expand = false;
 		w12.Fill = false;
-		// Container child vbox9.Gtk.Box+BoxChild
-		this.GtkScrolledWindow3 = new global::Gtk.ScrolledWindow ();
-		this.GtkScrolledWindow3.Name = "GtkScrolledWindow3";
-		this.GtkScrolledWindow3.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child GtkScrolledWindow3.Gtk.Container+ContainerChild
-		this.textview4 = new global::Gtk.TextView ();
-		this.textview4.CanFocus = true;
-		this.textview4.Name = "textview4";
-		this.GtkScrolledWindow3.Add (this.textview4);
-		this.vbox9.Add (this.GtkScrolledWindow3);
-		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox9 [this.GtkScrolledWindow3]));
-		w14.Position = 1;
-		// Container child vbox9.Gtk.Box+BoxChild
-		this.button6 = new global::Gtk.Button ();
-		this.button6.WidthRequest = 105;
-		this.button6.CanFocus = true;
-		this.button6.Name = "button6";
-		this.button6.UseUnderline = true;
-		this.button6.Label = global::Mono.Unix.Catalog.GetString ("Enviar Mensaje");
-		this.vbox9.Add (this.button6);
-		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.vbox9 [this.button6]));
-		w15.Position = 2;
-		w15.Expand = false;
-		w15.Fill = false;
-		this.hbox5.Add (this.vbox9);
-		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.vbox9]));
+		// Container child ContenedorMedio.Gtk.Box+BoxChild
+		this.RegistroEventos = new global::Gtk.VBox ();
+		this.RegistroEventos.Name = "RegistroEventos";
+		this.RegistroEventos.Spacing = 6;
+		// Container child RegistroEventos.Gtk.Box+BoxChild
+		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
+		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+		this.textviewRegistro = new global::Gtk.TextView ();
+		this.textviewRegistro.CanFocus = true;
+		this.textviewRegistro.Name = "textviewRegistro";
+		this.GtkScrolledWindow.Add (this.textviewRegistro);
+		this.RegistroEventos.Add (this.GtkScrolledWindow);
+		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.RegistroEventos [this.GtkScrolledWindow]));
+		w14.Position = 0;
+		this.ContenedorMedio.Add (this.RegistroEventos);
+		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.ContenedorMedio [this.RegistroEventos]));
+		w15.Position = 1;
+		// Container child ContenedorMedio.Gtk.Box+BoxChild
+		this.ContenedorMensajes = new global::Gtk.VBox ();
+		this.ContenedorMensajes.Name = "ContenedorMensajes";
+		this.ContenedorMensajes.Spacing = 6;
+		// Container child ContenedorMensajes.Gtk.Box+BoxChild
+		this.hbox10 = new global::Gtk.HBox ();
+		this.hbox10.Name = "hbox10";
+		this.hbox10.Spacing = 6;
+		// Container child hbox10.Gtk.Box+BoxChild
+		this.label8 = new global::Gtk.Label ();
+		this.label8.WidthRequest = 130;
+		this.label8.Name = "label8";
+		this.label8.LabelProp = global::Mono.Unix.Catalog.GetString ("Mensajes: ");
+		this.label8.UseMarkup = true;
+		this.hbox10.Add (this.label8);
+		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox10 [this.label8]));
 		w16.Position = 0;
 		w16.Expand = false;
 		w16.Fill = false;
-		// Container child hbox5.Gtk.Box+BoxChild
-		this.vseparator1 = new global::Gtk.VSeparator ();
-		this.vseparator1.Name = "vseparator1";
-		this.hbox5.Add (this.vseparator1);
-		global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.vseparator1]));
+		// Container child hbox10.Gtk.Box+BoxChild
+		this.hseparator4 = new global::Gtk.HSeparator ();
+		this.hseparator4.Name = "hseparator4";
+		this.hbox10.Add (this.hseparator4);
+		global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.hbox10 [this.hseparator4]));
 		w17.Position = 1;
-		w17.Expand = false;
-		w17.Fill = false;
-		// Container child hbox5.Gtk.Box+BoxChild
-		this.vbox11 = new global::Gtk.VBox ();
-		this.vbox11.WidthRequest = 245;
-		this.vbox11.Name = "vbox11";
-		this.vbox11.Spacing = 6;
-		// Container child vbox11.Gtk.Box+BoxChild
-		this.label7 = new global::Gtk.Label ();
-		this.label7.Name = "label7";
-		this.label7.LabelProp = global::Mono.Unix.Catalog.GetString ("Mensaje desde Cliente:");
-		this.vbox11.Add (this.label7);
-		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox11 [this.label7]));
+		this.ContenedorMensajes.Add (this.hbox10);
+		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.ContenedorMensajes [this.hbox10]));
 		w18.Position = 0;
 		w18.Expand = false;
 		w18.Fill = false;
-		// Container child vbox11.Gtk.Box+BoxChild
-		this.GtkScrolledWindow4 = new global::Gtk.ScrolledWindow ();
-		this.GtkScrolledWindow4.Name = "GtkScrolledWindow4";
-		this.GtkScrolledWindow4.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child GtkScrolledWindow4.Gtk.Container+ContainerChild
-		this.textview5 = new global::Gtk.TextView ();
-		this.textview5.CanFocus = true;
-		this.textview5.Name = "textview5";
-		this.GtkScrolledWindow4.Add (this.textview5);
-		this.vbox11.Add (this.GtkScrolledWindow4);
-		global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.vbox11 [this.GtkScrolledWindow4]));
+		// Container child ContenedorMensajes.Gtk.Box+BoxChild
+		this.GtkScrolledWindow1 = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow1.Name = "GtkScrolledWindow1";
+		this.GtkScrolledWindow1.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow1.Gtk.Container+ContainerChild
+		this.textviewMensajes = new global::Gtk.TextView ();
+		this.textviewMensajes.CanFocus = true;
+		this.textviewMensajes.Name = "textviewMensajes";
+		this.GtkScrolledWindow1.Add (this.textviewMensajes);
+		this.ContenedorMensajes.Add (this.GtkScrolledWindow1);
+		global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.ContenedorMensajes [this.GtkScrolledWindow1]));
 		w20.Position = 1;
-		this.hbox5.Add (this.vbox11);
-		global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.vbox11]));
-		w21.Position = 2;
-		w21.Expand = false;
-		w21.Fill = false;
-		this.vbox8.Add (this.hbox5);
-		global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.hbox5]));
-		w22.Position = 0;
-		// Container child vbox8.Gtk.Box+BoxChild
-		this.btnCerrar1 = new global::Gtk.Button ();
-		this.btnCerrar1.WidthRequest = 105;
-		this.btnCerrar1.CanFocus = true;
-		this.btnCerrar1.Name = "btnCerrar1";
-		this.btnCerrar1.UseUnderline = true;
-		this.btnCerrar1.Label = global::Mono.Unix.Catalog.GetString ("Cerrar Conexión");
-		this.vbox8.Add (this.btnCerrar1);
-		global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.btnCerrar1]));
-		w23.Position = 1;
+		// Container child ContenedorMensajes.Gtk.Box+BoxChild
+		this.hbox11 = new global::Gtk.HBox ();
+		this.hbox11.Name = "hbox11";
+		this.hbox11.Spacing = 6;
+		// Container child hbox11.Gtk.Box+BoxChild
+		this.entry1 = new global::Gtk.Entry ();
+		this.entry1.CanFocus = true;
+		this.entry1.Name = "entry1";
+		this.entry1.IsEditable = true;
+		this.entry1.InvisibleChar = '●';
+		this.hbox11.Add (this.entry1);
+		global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox11 [this.entry1]));
+		w21.Position = 0;
+		// Container child hbox11.Gtk.Box+BoxChild
+		this.btnEnviar = new global::Gtk.Button ();
+		this.btnEnviar.CanFocus = true;
+		this.btnEnviar.Name = "btnEnviar";
+		this.btnEnviar.UseUnderline = true;
+		this.btnEnviar.Label = global::Mono.Unix.Catalog.GetString ("Enviar");
+		this.hbox11.Add (this.btnEnviar);
+		global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.hbox11 [this.btnEnviar]));
+		w22.Position = 1;
+		w22.Expand = false;
+		w22.Fill = false;
+		this.ContenedorMensajes.Add (this.hbox11);
+		global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.ContenedorMensajes [this.hbox11]));
+		w23.Position = 2;
 		w23.Expand = false;
 		w23.Fill = false;
-		this.vbox5.Add (this.vbox8);
-		global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.vbox8]));
+		this.ContenedorMedio.Add (this.ContenedorMensajes);
+		global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.ContenedorMedio [this.ContenedorMensajes]));
 		w24.Position = 2;
-		this.fixed1.Add (this.vbox5);
-		global::Gtk.Fixed.FixedChild w25 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.vbox5]));
-		w25.X = 5;
-		w25.Y = 8;
+		this.ContenedorVentana.Add (this.ContenedorMedio);
+		global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.ContenedorVentana [this.ContenedorMedio]));
+		w25.Position = 1;
+		// Container child ContenedorVentana.Gtk.Box+BoxChild
+		this.vbox53 = new global::Gtk.VBox ();
+		this.vbox53.Name = "vbox53";
+		this.vbox53.Spacing = 6;
+		// Container child vbox53.Gtk.Box+BoxChild
+		this.hseparator5 = new global::Gtk.HSeparator ();
+		this.hseparator5.Name = "hseparator5";
+		this.vbox53.Add (this.hseparator5);
+		global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.vbox53 [this.hseparator5]));
+		w26.Position = 0;
+		w26.Expand = false;
+		w26.Fill = false;
+		// Container child vbox53.Gtk.Box+BoxChild
+		this.btnCerrar = new global::Gtk.Button ();
+		this.btnCerrar.CanFocus = true;
+		this.btnCerrar.Name = "btnCerrar";
+		this.btnCerrar.UseUnderline = true;
+		this.btnCerrar.Label = global::Mono.Unix.Catalog.GetString ("Cerrar Venana");
+		this.vbox53.Add (this.btnCerrar);
+		global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.vbox53 [this.btnCerrar]));
+		w27.Position = 1;
+		w27.Expand = false;
+		w27.Fill = false;
+		// Container child vbox53.Gtk.Box+BoxChild
+		this.labelCreditos = new global::Gtk.Label ();
+		this.labelCreditos.Name = "labelCreditos";
+		this.labelCreditos.LabelProp = global::Mono.Unix.Catalog.GetString ("Desarrollado por César Ortiz y Lukas Gómez | ® 2013");
+		this.vbox53.Add (this.labelCreditos);
+		global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox53 [this.labelCreditos]));
+		w28.PackType = ((global::Gtk.PackType)(1));
+		w28.Position = 2;
+		w28.Expand = false;
+		w28.Fill = false;
+		this.ContenedorVentana.Add (this.vbox53);
+		global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.ContenedorVentana [this.vbox53]));
+		w29.Position = 2;
+		w29.Expand = false;
+		w29.Fill = false;
+		this.fixed1.Add (this.ContenedorVentana);
+		global::Gtk.Fixed.FixedChild w30 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.ContenedorVentana]));
+		w30.X = 5;
+		w30.Y = 4;
 		this.Add (this.fixed1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 520;
-		this.DefaultHeight = 461;
+		this.DefaultWidth = 522;
+		this.DefaultHeight = 460;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
-		this.btn_Iniciar1.Clicked += new global::System.EventHandler (this.btn_Iniciar_Clicked);
-		this.btnCerrar1.Clicked += new global::System.EventHandler (this.btnCerrar_Clicked);
+		this.btnIniciar.Clicked += new global::System.EventHandler (this.btn_Iniciar_Clicked);
+		this.btnTerminar.Clicked += new global::System.EventHandler (this.btnTerminar_Clicked);
+		this.btnCerrar.Clicked += new global::System.EventHandler (this.btnCerrar_Clicked);
 	}
 }

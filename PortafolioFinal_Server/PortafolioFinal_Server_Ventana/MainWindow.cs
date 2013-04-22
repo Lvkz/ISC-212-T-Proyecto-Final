@@ -7,10 +7,13 @@ using System.Threading;
 public partial class MainWindow: Gtk.Window
 {	
 	public Thread HiloServidor;
+	public Clase_Servidor Servidor;
 
 	public MainWindow (): base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
+		btnTerminar.Sensitive = false;
+		labelEstadoServidor.LabelProp = @"<span foreground=""red"">Desconectado</span>";
 	}
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -20,22 +23,34 @@ public partial class MainWindow: Gtk.Window
 	}
 
 	protected void btnCerrar_Clicked (object sender, EventArgs e)
-	{
-		Program_servidor.CerrarServidor();
-		HiloServidor.Abort();
-
+	{                          
 		Gtk.Main.Quit();
 	}
 
 	protected void btn_Iniciar_Clicked (object sender, EventArgs e)
 	{
-		btn_Iniciar1.IsFocus= false;
-		Program_servidor Servidor = new Program_servidor();
-<<<<<<< HEAD
-		Servidor = new Program_Servidor();
-=======
->>>>>>> parent of 5d471e2... Cambio Ventana Servidor - Versión Final
+		if (Clase_Servidor.EstadoServidor) {
+			btnIniciar.Sensitive = false;
+			btnCerrar.Sensitive = false;
+			btnTerminar.Sensitive = true;
+			
+			labelEstadoServidor.LabelProp = @"<span foreground=""darkgreen"">¡Conectado!</span>";
+		}
+
+		Servidor = new Clase_Servidor();
 		HiloServidor = new Thread(Servidor.ClaseServidor);
 		HiloServidor.Start();
+	}
+
+	protected void btnTerminar_Clicked (object sender, EventArgs e)
+	{
+		Clase_Servidor.CerrarServidor();
+		HiloServidor.Abort();
+
+		labelEstadoServidor.LabelProp = @"<span foreground=""red"" text-align=""left"">Desconectado.</span>";
+
+
+		btnIniciar.Sensitive = true;
+		btnCerrar.Sensitive = true;
 	}
 }
