@@ -22,8 +22,8 @@ namespace PortafolioFinal_Chat
 			
 			var ventanaPrincipal = (VentanaPrincipal) this.Activity;
 
-			if (ventanaPrincipal.ActionBar.TabCount > 2) {
-				ventanaPrincipal.ActionBar.RemoveTabAt(2);
+			if (ventanaPrincipal.ActionBar.TabCount > 1) {
+				ventanaPrincipal.ActionBar.RemoveTabAt(1);
 			}
 			
 			string[] values = new[] { "Sala Tecnología",
@@ -37,8 +37,8 @@ namespace PortafolioFinal_Chat
 		public override void OnListItemClick(ListView l, View v, int index, long id)
 		{
 			var ventanaPrincipal = (VentanaPrincipal) this.Activity;
-			ventanaPrincipal.AddTab ("Chat", 2);
-			ventanaPrincipal.ActionBar.SetSelectedNavigationItem(2);
+			ventanaPrincipal.AddTab ("Chat", 1);
+			ventanaPrincipal.ActionBar.SetSelectedNavigationItem(1);
 			
 			variablesGlobales.textoConversacion = (string) l.GetItemAtPosition(index);
 			

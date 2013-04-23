@@ -11,7 +11,7 @@
         <category android:name="mono.android.intent.category.SEPPUKU.PortafolioFinal_Chat.PortafolioFinal_Chat" />
       </intent-filter>
     </receiver>
-    <activity android:label="@string/app_name" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreenb33c2c9bec154e5091beb8ff2b5147e2" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+    <activity android:label="@string/app_name" android:name="portafoliofinal_chat.portafoliofinal_chat.TrialSplashScreenc7c2eddc97a0491c942c60bc0a9144eb" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

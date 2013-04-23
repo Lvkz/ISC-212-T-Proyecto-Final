@@ -18,6 +18,7 @@ namespace PortafolioFinal_Chat
 	{
 		public TcpClient Cliente;
 		public NetworkStream StreamCliente;
+		public string direccionIP;
 		public string infoMensaje;
 		public bool verificacion;
 
@@ -29,80 +30,88 @@ namespace PortafolioFinal_Chat
 			Button btnLogin = FindViewById<Button> (Resource.Id.btn_Login);
 			EditText EditNombre = FindViewById<EditText> (Resource.Id.textboxNombre);
 			EditText EditContrasena = FindViewById<EditText> (Resource.Id.textboxContraseña);
+			EditText EditDireccionIP = FindViewById<EditText> (Resource.Id.textboxIP);
 
 			btnLogin.Click += (sender, e) => {
 
-				try
-				{
-					//Salir si el nombre no esta digitado..
-					if(EditNombre.Text==string.Empty)
-					{
-						RunOnUiThread(() => {
-						
-						AlertDialog.Builder builder = new AlertDialog.Builder(this);
-						builder.SetTitle("Aviso");
-						builder.SetMessage("El Campo Nombre esta vacio");
-						builder.SetCancelable(false);
-						builder.SetPositiveButton("OK", delegate { });
-						builder.Show();
-						});
-						
-						return;
-					}
-					//si la contraseña no esta digitada
-					if(EditContrasena.Text==string.Empty)
-					{
-							RunOnUiThread(() => {
-						
-						AlertDialog.Builder builder = new AlertDialog.Builder(this);
-						builder.SetTitle("Aviso");
-						builder.SetMessage("El Campo Contraseña esta vacio");
-						builder.SetCancelable(false);
-						builder.SetPositiveButton("OK", delegate { });
-						builder.Show();
-						});
-						
-						return;
-					}
-					Cliente = new TcpClient("172.20.10.8", 6080);
-					StreamCliente = Cliente.GetStream();
-					Console.WriteLine("estoy por aqui");
-					byte[] data = Encoding.ASCII.GetBytes(EditNombre.Text+":"+EditContrasena.Text);
-					StreamCliente.Write(data, 0, data.Length);
-					StreamCliente.Flush();
+				direccionIP = EditDireccionIP.Text;
 
-					infoMensaje = "Conectando Con el Servidor";
-					verificacion = true;
+				//Salir si la dirección IP no esta digitada.
+				if(EditDireccionIP.Text==string.Empty)
+				{
+					infoMensaje = "El Campo DireccionIP esta vacio";
+					Mensaje(infoMensaje);
+					return;
 				}
 
-				catch 
+				//Salir si el nombre no esta digitado.
+				else if(EditNombre.Text==string.Empty)
 				{
-					infoMensaje=("Error Al conectar");
-					verificacion = false;
+					infoMensaje = "El Campo Nombre esta vacio";
+					Mensaje(infoMensaje);
+					return;
+				}
+				//si la contraseña no esta digitada.
+				else if(EditContrasena.Text==string.Empty)
+				{
+					infoMensaje = "El Campo Contraseña esta vacio";
+					Mensaje(infoMensaje);
+					return;
 				}
 
-				finally
-				{
-					Console.WriteLine(infoMensaje);
-				}
-
-				if (verificacion)
-				{
-					StartActivity(typeof(VentanaPrincipal));
-				}
 				else
 				{
-					RunOnUiThread(() => {
-						AlertDialog.Builder builder = new AlertDialog.Builder(this);
-						builder.SetTitle("Aviso");
-						builder.SetMessage(infoMensaje);
-						builder.SetCancelable(false);
-						builder.SetPositiveButton("OK", delegate { });
-						builder.Show();
-					});
-				}				
-			};
+					try
+					{
+						Cliente = new TcpClient(direccionIP, 6080);
+						StreamCliente = Cliente.GetStream();
+						byte[] data = Encoding.ASCII.GetBytes(EditNombre.Text+":"+EditContrasena.Text);
+						StreamCliente.Write(data, 0, data.Length);
+						StreamCliente.Flush();
+						
+						infoMensaje = "Conectando Con el Servidor...";
+						verificacion = true;
+						Mensaje(infoMensaje);
+					}
+					
+					catch 
+					{
+						infoMensaje=("Error Al conectar");
+						verificacion = false;
+					}
+					
+					finally
+					{
+						Console.WriteLine(infoMensaje);
 
+						if (verificacion)
+						{
+							StartActivity(typeof(VentanaPrincipal));
+						}
+						else
+						{
+							Mensaje(infoMensaje);
+						}
+					}
+				}
+			};
 		}
-	}			
+
+		public void Mensaje (string infoMensaje)
+		{
+			RunOnUiThread (() => {
+				
+				AlertDialog.Builder builder = new AlertDialog.Builder (this);
+				builder.SetTitle ("Aviso");
+				builder.SetMessage (infoMensaje);
+				builder.SetCancelable (false);
+
+				if (!verificacion) {
+					builder.SetPositiveButton ("OK", delegate {	});
+				}
+
+				builder.Show ();
+			});
+		}
+	}
 }

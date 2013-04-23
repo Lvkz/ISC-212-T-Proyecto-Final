@@ -7,7 +7,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/PortafolioFinal_Server_Ventana.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="522 460">
+  <widget class="Gtk.Window" id="MainWindow" design-size="522 473">
     <property name="MemberName" />
     <property name="WidthRequest">500</property>
     <property name="HeightRequest">460</property>
@@ -81,31 +81,27 @@
                     <property name="MemberName" />
                     <property name="Spacing">6</property>
                     <child>
+                      <widget class="Gtk.Entry" id="textboxIP">
+                        <property name="MemberName" />
+                        <property name="WidthRequest">0</property>
+                        <property name="CanFocus">True</property>
+                        <property name="IsEditable">True</property>
+                        <property name="InvisibleChar">●</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">0</property>
+                        <property name="AutoSize">True</property>
+                      </packing>
+                    </child>
+                    <child>
                       <widget class="Gtk.Button" id="btnIniciar">
                         <property name="MemberName" />
-                        <property name="WidthRequest">165</property>
+                        <property name="WidthRequest">125</property>
                         <property name="CanFocus">True</property>
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">Iniciar Servidor</property>
                         <property name="UseUnderline">True</property>
                         <signal name="Clicked" handler="btn_Iniciar_Clicked" />
-                      </widget>
-                      <packing>
-                        <property name="Position">0</property>
-                        <property name="AutoSize">True</property>
-                        <property name="Expand">False</property>
-                        <property name="Fill">False</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="Gtk.Button" id="btnTerminar">
-                        <property name="MemberName" />
-                        <property name="WidthRequest">165</property>
-                        <property name="CanFocus">True</property>
-                        <property name="Type">TextOnly</property>
-                        <property name="Label" translatable="yes">Terminar Servidor</property>
-                        <property name="UseUnderline">True</property>
-                        <signal name="Clicked" handler="btnTerminar_Clicked" />
                       </widget>
                       <packing>
                         <property name="Position">1</property>
@@ -115,9 +111,26 @@
                       </packing>
                     </child>
                     <child>
+                      <widget class="Gtk.Button" id="btnTerminar">
+                        <property name="MemberName" />
+                        <property name="WidthRequest">125</property>
+                        <property name="CanFocus">True</property>
+                        <property name="Type">TextOnly</property>
+                        <property name="Label" translatable="yes">Terminar Servidor</property>
+                        <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="btnTerminar_Clicked" />
+                      </widget>
+                      <packing>
+                        <property name="Position">2</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
                       <widget class="Gtk.Label" id="labelEstadoServidor">
                         <property name="MemberName" />
-                        <property name="WidthRequest">165</property>
+                        <property name="WidthRequest">125</property>
                         <property name="Xalign">1</property>
                         <property name="LabelProp" translatable="yes">
 </property>
@@ -126,7 +139,7 @@
                         <property name="Justify">Center</property>
                       </widget>
                       <packing>
-                        <property name="Position">2</property>
+                        <property name="Position">3</property>
                         <property name="AutoSize">True</property>
                         <property name="Expand">False</property>
                         <property name="Fill">False</property>
@@ -143,8 +156,7 @@
               </widget>
               <packing>
                 <property name="Position">0</property>
-                <property name="AutoSize">True</property>
-                <property name="Expand">False</property>
+                <property name="AutoSize">False</property>
                 <property name="Fill">False</property>
               </packing>
             </child>
@@ -378,8 +390,8 @@
             </child>
           </widget>
           <packing>
-            <property name="X">5</property>
-            <property name="Y">4</property>
+            <property name="X">8</property>
+            <property name="Y">6</property>
           </packing>
         </child>
       </widget>

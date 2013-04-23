@@ -1,9 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Chat/Login.cs">
+    <Files>
+      <File FileName="PortafolioFinal_Chat/Login.cs" Line="72" Column="51" />
+      <File FileName="PortafolioFinal_Chat/VentanaPrincipal.cs" Line="44" Column="50" />
+      <File FileName="PortafolioFinal_Chat/Resources/values/Strings.xml" Line="5" Column="58" />
+      <File FileName="PortafolioFinal_Chat/fragmentVentanaChat.cs" Line="27" Column="83" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.PortafolioFinal__Chat MonoForAntroid.PreferredTheme="Theme.DeviceDefault" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+  <MonoDevelop.Ide.ItemProperties.PortafolioFinal__Chat MonoForAntroid.PreferredTheme="Theme.DeviceDefault" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="emulator-5554" />
 </Properties>

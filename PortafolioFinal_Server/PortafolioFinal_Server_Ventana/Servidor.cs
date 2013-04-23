@@ -23,7 +23,7 @@ namespace PortafolioFinal_Server_Ventana
 			try
 			{
 				//Conectarme
-				Servidor = new TcpListener(IPAddress.Parse("192.168.1.5"), 6080);
+				Servidor = new TcpListener(IPAddress.Parse(MainWindow.stringIP), 6080);
 				Cliente = new Hashtable();
 				Servidor.Start();
 				Console.WriteLine("Servidor Conectado.....................");

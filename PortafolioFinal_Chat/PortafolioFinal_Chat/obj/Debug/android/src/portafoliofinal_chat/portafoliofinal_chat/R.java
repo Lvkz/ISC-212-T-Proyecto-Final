@@ -20,15 +20,18 @@ public final class R {
     }
     public static final class id {
         public static final int btn_Enviar=0x7f070006;
-        public static final int btn_Login=0x7f07000a;
+        public static final int btn_Login=0x7f07000e;
         public static final int fragmentContainer=0x7f070007;
         public static final int label_Titulo=0x7f070002;
         public static final int linearLayout1=0x7f070004;
         public static final int listview_Contactos=0x7f070001;
-        public static final int progressBarLogin=0x7f07000b;
         public static final int sampleTextView=0x7f070000;
-        public static final int textboxContraseña=0x7f070009;
-        public static final int textboxNombre=0x7f070008;
+        public static final int textView1=0x7f07000a;
+        public static final int textView2=0x7f07000c;
+        public static final int textView3=0x7f070008;
+        public static final int textboxContraseña=0x7f07000d;
+        public static final int textboxIP=0x7f070009;
+        public static final int textboxNombre=0x7f07000b;
         public static final int txt_Mensaje=0x7f070005;
         public static final int webView1=0x7f070003;
     }
