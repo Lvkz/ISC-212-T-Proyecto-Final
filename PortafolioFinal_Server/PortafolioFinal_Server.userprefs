@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Server_Ventana/Servidor.cs">
     <Files>
-      <File FileName="PortafolioFinal_Server_Ventana/Servidor.cs" Line="141" Column="18" />
-      <File FileName="PortafolioFinal_Server_Ventana/Program.cs" Line="19" Column="2" />
+      <File FileName="PortafolioFinal_Server_Ventana/Servidor.cs" Line="80" Column="23" />
+      <File FileName="PortafolioFinal_Server_Ventana/Program.cs" Line="1" Column="1" />
+      <File FileName="PortafolioFinal_Server_Ventana/Basededatos.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

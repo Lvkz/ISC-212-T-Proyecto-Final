@@ -32,10 +32,8 @@ namespace PortafolioFinal_Server_Ventana
 				mensajeRegistro = "Servidor Conectado.....................";
 
 				//Se crea una instancia nueva para poder acceder al método que va a llenar el textview.
-				MainWindow ventana = new MainWindow();
-				ventana.anadir_Registro(mensajeRegistro);
-				//MainWindow.anadirTextView(mensajeRegistro, 1);
-
+				//MainWindow ventana = new MainWindow();
+				//ventana.anadir_Registro(mensajeRegistro);
 
 				Console.WriteLine("Servidor Conectado.....................");
 				EstadoServidor = true;
@@ -56,7 +54,7 @@ namespace PortafolioFinal_Server_Ventana
 
 
 					usuarios nuevo = new usuarios();
-					if(nuevo.Estan_Registrados(words[0],words[1])==true)
+					if(nuevo.Estan_Registrados(words[0],words[1])!=true)
 					{
 						Byte[] uno = null;
 						
@@ -78,10 +76,8 @@ namespace PortafolioFinal_Server_Ventana
 						strinnn.Flush();
 						
 						
-					}
-					
+					}	
 					//ciclo infinito 
-					
 				}
 			}
 			catch
