@@ -46,9 +46,9 @@ public partial class MainWindow: Gtk.Window
 
 		labelEstadoServidor.LabelProp = @"<span foreground=""red"">        Desconectado.</span>";
 
-
 		btnIniciar.Sensitive = true;
 		btnCerrar.Sensitive = true;
+		btnTerminar.Sensitive = false;
 	}
 
 	protected void CambioEstadoBotones ()
