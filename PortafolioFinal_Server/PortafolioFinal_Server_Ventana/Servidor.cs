@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Collections;
+using Gtk;
 
 namespace PortafolioFinal_Server_Ventana
 {
@@ -15,6 +16,7 @@ namespace PortafolioFinal_Server_Ventana
 		static Hashtable Cliente;
 		public static bool EstadoServidor;
 		public static bool Ciclos = true;
+		public static string mensajeRegistro;
 		
 		public void ClaseServidor()
 		{
@@ -26,7 +28,12 @@ namespace PortafolioFinal_Server_Ventana
 				Servidor = new TcpListener(IPAddress.Parse(MainWindow.stringIP), 6080);
 				Cliente = new Hashtable();
 				Servidor.Start();
-				MainWindow.Mensajes_informativos("Servidor Conectado.....................");
+				mensajeRegistro = "Servidor Conectado.....................";
+
+				//Se crea una instancia nueva para poder acceder al método que va a llenar el textview.
+				MainWindow ventana = new MainWindow();
+				ventana.anadir_Registro(mensajeRegistro);
+
 				Console.WriteLine("Servidor Conectado.....................");
 				EstadoServidor = true;
 				
@@ -41,7 +48,9 @@ namespace PortafolioFinal_Server_Ventana
 					
 					MensajeCliente = Encoding.ASCII.GetString(msj_en_Byte, 0, msj_en_Byte.Length);
 					string[] words = MensajeCliente.Split(':');
-					
+
+
+
 					usuarios nuevo = new usuarios();
 					if(nuevo.Estan_Registrados(words[0],words[1])==true)
 					{

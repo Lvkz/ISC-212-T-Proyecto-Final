@@ -7,8 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 
-
-
 public partial class MainWindow : Gtk.Window
 {	
 	public static Thread HiloServidor;
@@ -94,14 +92,18 @@ public partial class MainWindow : Gtk.Window
 	{
 
 	}
-	void GtkTextviewAppend(GtkWidget *textview, gchar *text)
-	{
-		GtkTextBuffer *tbuffer;
-		GtkTextIter ei;
-		
-		tbuffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview));
-		gtk_text_buffer_get_end_iter(tbuffer, &ei);
-		gtk_text_buffer_insert(tbuffer, &ei, text, -1);
+
+	public void anadir_Registro(string textToAdd) 
+	{	
+		TextIter mIter = textviewRegistro.Buffer.EndIter;
+		textviewRegistro.Buffer.Insert(ref mIter, textToAdd);
+		textviewRegistro.ScrollToIter(textviewRegistro.Buffer.EndIter, 0, false, 0, 0);
 	}
 
+	public void anadir_Mensaje(string textToAdd) 
+	{	
+		TextIter mIter = textviewMensajes.Buffer.EndIter;
+		textviewMensajes.Buffer.Insert(ref mIter, textToAdd);
+		textviewMensajes.ScrollToIter(textviewMensajes.Buffer.EndIter, 0, false, 0, 0);
+	}
 }
