@@ -1,11 +1,11 @@
-﻿<Properties>
+﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Chat/Login.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PortafolioFinal_Chat/fragmentVentanaChat.cs">
     <Files>
       <File FileName="PortafolioFinal_Chat/Login.cs" Line="72" Column="51" />
       <File FileName="PortafolioFinal_Chat/VentanaPrincipal.cs" Line="44" Column="50" />
       <File FileName="PortafolioFinal_Chat/Resources/values/Strings.xml" Line="5" Column="58" />
-      <File FileName="PortafolioFinal_Chat/fragmentVentanaChat.cs" Line="27" Column="83" />
+      <File FileName="PortafolioFinal_Chat/fragmentVentanaChat.cs" Line="39" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
