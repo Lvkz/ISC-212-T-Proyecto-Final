@@ -48,9 +48,9 @@
                     <child>
                       <widget class="Gtk.Label" id="labelAccioneServidor">
                         <property name="MemberName" />
-                        <property name="WidthRequest">130</property>
                         <property name="LabelProp" translatable="yes">Acciones Servidor:</property>
                         <property name="UseMarkup">True</property>
+                        <property name="Wrap">True</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -119,8 +119,10 @@
                         <property name="MemberName" />
                         <property name="WidthRequest">165</property>
                         <property name="Xalign">1</property>
-                        <property name="LabelProp" translatable="yes">Estado del Servidor: </property>
+                        <property name="LabelProp" translatable="yes">
+</property>
                         <property name="UseMarkup">True</property>
+                        <property name="Wrap">True</property>
                         <property name="Justify">Center</property>
                       </widget>
                       <packing>
@@ -158,9 +160,9 @@
                     <child>
                       <widget class="Gtk.Label" id="labelRegistro">
                         <property name="MemberName" />
-                        <property name="WidthRequest">130</property>
                         <property name="LabelProp" translatable="yes">Registro Actividades:</property>
                         <property name="UseMarkup">True</property>
+                        <property name="Wrap">True</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -225,9 +227,9 @@
                         <child>
                           <widget class="Gtk.Label" id="label8">
                             <property name="MemberName" />
-                            <property name="WidthRequest">130</property>
                             <property name="LabelProp" translatable="yes">Mensajes: </property>
                             <property name="UseMarkup">True</property>
+                            <property name="Wrap">True</property>
                           </widget>
                           <packing>
                             <property name="Position">0</property>

@@ -74,10 +74,10 @@ public partial class MainWindow
 		this.Grupo1.Spacing = 6;
 		// Container child Grupo1.Gtk.Box+BoxChild
 		this.labelAccioneServidor = new global::Gtk.Label ();
-		this.labelAccioneServidor.WidthRequest = 130;
 		this.labelAccioneServidor.Name = "labelAccioneServidor";
 		this.labelAccioneServidor.LabelProp = global::Mono.Unix.Catalog.GetString ("Acciones Servidor:");
 		this.labelAccioneServidor.UseMarkup = true;
+		this.labelAccioneServidor.Wrap = true;
 		this.Grupo1.Add (this.labelAccioneServidor);
 		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.Grupo1 [this.labelAccioneServidor]));
 		w2.Position = 0;
@@ -127,8 +127,9 @@ public partial class MainWindow
 		this.labelEstadoServidor.WidthRequest = 165;
 		this.labelEstadoServidor.Name = "labelEstadoServidor";
 		this.labelEstadoServidor.Xalign = 1F;
-		this.labelEstadoServidor.LabelProp = global::Mono.Unix.Catalog.GetString ("Estado del Servidor: ");
+		this.labelEstadoServidor.LabelProp = global::Mono.Unix.Catalog.GetString ("\n");
 		this.labelEstadoServidor.UseMarkup = true;
+		this.labelEstadoServidor.Wrap = true;
 		this.labelEstadoServidor.Justify = ((global::Gtk.Justification)(2));
 		this.ContenedorBotones.Add (this.labelEstadoServidor);
 		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.ContenedorBotones [this.labelEstadoServidor]));
@@ -156,10 +157,10 @@ public partial class MainWindow
 		this.Grupo2.Spacing = 6;
 		// Container child Grupo2.Gtk.Box+BoxChild
 		this.labelRegistro = new global::Gtk.Label ();
-		this.labelRegistro.WidthRequest = 130;
 		this.labelRegistro.Name = "labelRegistro";
 		this.labelRegistro.LabelProp = global::Mono.Unix.Catalog.GetString ("Registro Actividades:");
 		this.labelRegistro.UseMarkup = true;
+		this.labelRegistro.Wrap = true;
 		this.Grupo2.Add (this.labelRegistro);
 		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.Grupo2 [this.labelRegistro]));
 		w10.Position = 0;
@@ -205,10 +206,10 @@ public partial class MainWindow
 		this.hbox10.Spacing = 6;
 		// Container child hbox10.Gtk.Box+BoxChild
 		this.label8 = new global::Gtk.Label ();
-		this.label8.WidthRequest = 130;
 		this.label8.Name = "label8";
 		this.label8.LabelProp = global::Mono.Unix.Catalog.GetString ("Mensajes: ");
 		this.label8.UseMarkup = true;
+		this.label8.Wrap = true;
 		this.hbox10.Add (this.label8);
 		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox10 [this.label8]));
 		w16.Position = 0;

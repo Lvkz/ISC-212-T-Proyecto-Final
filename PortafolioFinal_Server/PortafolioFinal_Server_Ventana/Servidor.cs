@@ -29,6 +29,7 @@ namespace PortafolioFinal_Server_Ventana
 				Console.WriteLine("Servidor Conectado.....................");
 				EstadoServidor = true;
 
+
 				while (Ciclos)
 				{
 					TcpClient Clinte = Servidor.AcceptTcpClient();
