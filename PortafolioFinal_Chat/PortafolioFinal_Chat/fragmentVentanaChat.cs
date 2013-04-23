@@ -40,7 +40,7 @@ namespace PortafolioFinal_Chat
 			var labelConversacion = view.FindViewById<TextView> (Resource.Id.label_Titulo);
 			var listviewContactos = view.FindViewById<ListView> (Resource.Id.listview_Contactos);
 			var txtMensaje = view.FindViewById<EditText> (Resource.Id.txt_Mensaje);
-			var txtVerMensaje = view.FindViewById<EditText> (Resource.Id.text_ver);
+
 			var btnEnviar = view.FindViewById<Button> (Resource.Id.btn_Enviar);
 			btnEnviar.Click += (sender, e) => {
 				
@@ -65,7 +65,7 @@ namespace PortafolioFinal_Chat
 		public void Mensaje_REcivido()
 		{
 			var view = inflater.Inflate (Resource.Layout.fragmentVentanaChat, container, false);
-			var txtVerMensaje = view.FindViewById<EditText> (Resource.Id.text_ver);
+			var txtVerMensaje = view.FindViewById<EditText> (Resource.Id.txt_MensajesRecibidos);
 			
 			txtVerMensaje.Text = "asdasdasdasdas  =>>" ;
 			Hilo.Abort();

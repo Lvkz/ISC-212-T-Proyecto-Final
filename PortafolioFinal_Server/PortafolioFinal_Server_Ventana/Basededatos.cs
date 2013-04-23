@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using MySql.Data.MySqlClient;
+using MySql.Data;
 
 namespace PortafolioFinal_Server_Ventana
 {
@@ -10,7 +11,7 @@ namespace PortafolioFinal_Server_Ventana
 		public int Id { get; set; }
 		public string Nombre { get; set; }
 		public string Contrasena { get; set; }
-		public static bool Correcto;
+
 		#endregion
 		#region Constructores
 		public usuarios()
@@ -21,9 +22,9 @@ namespace PortafolioFinal_Server_Ventana
 		{
 			Conexion.AbrirConexion();
 			
-			MySqlCommand tabla = new MySqlCommand("SELECT nombre,contrasena  FROM  usuarios  WHERE nombre='"+nombre+"' AND contrasena='"+contrasena+"'", Conexion.varConexion);
-			MySqlDataReader data = tabla.ExecuteReader();
-			if (data.Read())
+			MySqlCommand preguntar = new MySqlCommand("SELECT *FROM  usuarios  WHERE nombre='"+nombre+"' AND contrasena='"+contrasena+"'", Conexion.varConexion);
+			MySqlDataReader data =preguntar.ExecuteReader();
+			if (true)
 			{
 				return true;
 			}

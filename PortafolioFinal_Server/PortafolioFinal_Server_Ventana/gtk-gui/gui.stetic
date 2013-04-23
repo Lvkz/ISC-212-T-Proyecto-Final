@@ -308,6 +308,7 @@
                             <property name="Type">TextOnly</property>
                             <property name="Label" translatable="yes">Enviar</property>
                             <property name="UseUnderline">True</property>
+                            <signal name="Clicked" handler="btn_Enviar_Clicked" />
                           </widget>
                           <packing>
                             <property name="Position">1</property>

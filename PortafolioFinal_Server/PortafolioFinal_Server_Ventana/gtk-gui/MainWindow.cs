@@ -335,6 +335,7 @@ public partial class MainWindow
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.btnIniciar.Clicked += new global::System.EventHandler (this.btn_Iniciar_Clicked);
 		this.btnTerminar.Clicked += new global::System.EventHandler (this.btnTerminar_Clicked);
+		this.btnEnviar.Clicked += new global::System.EventHandler (this.btn_Enviar_Clicked);
 		this.btnCerrar.Clicked += new global::System.EventHandler (this.btnCerrar_Clicked);
 	}
 }

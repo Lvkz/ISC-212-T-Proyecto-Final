@@ -2,6 +2,11 @@ using System;
 using Gtk;
 using PortafolioFinal_Server_Ventana;
 using System.Threading;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net;
+
 
 
 public partial class MainWindow : Gtk.Window
@@ -82,5 +87,14 @@ public partial class MainWindow : Gtk.Window
 			
 			labelEstadoServidor.LabelProp = @"<span foreground=""darkgreen"">        ¡Conectado!</span>";
 		} 
+	}
+
+
+	protected void btn_Enviar_Clicked (object sender, EventArgs e)
+	{
+		throw new NotImplementedException ();
+		Thread hilo_nuevo = new Thread(	Clase_Servidor.msj_Todos(entry1.Text,"Servidor"));
+		hilo_nuevo.Start();
+		entry1.Text="";
 	}
 }

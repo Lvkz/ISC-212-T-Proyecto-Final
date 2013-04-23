@@ -11,7 +11,7 @@ namespace PortafolioFinal_Server_Ventana
 {
 	public class Clase_Servidor
 	{
-		static TcpListener Servidor;
+		public static TcpListener Servidor;
 		static Hashtable Cliente;
 		public static bool EstadoServidor;
 		public static bool Ciclos = true;
@@ -23,7 +23,7 @@ namespace PortafolioFinal_Server_Ventana
 			try
 			{
 				//Conectarme
-				Servidor = new TcpListener(IPAddress.Parse("10.0.0.3"), 6080);
+				Servidor = new TcpListener(IPAddress.Parse(MainWindow.stringIP), 6080);
 				Cliente = new Hashtable();
 				Servidor.Start();
 				Console.WriteLine("Servidor Conectado.....................");
@@ -44,16 +44,14 @@ namespace PortafolioFinal_Server_Ventana
 					usuarios nuevo = new usuarios();
 					if(nuevo.Estan_Registrados(words[0],words[1])==true)
 					{
-						Cliente.Add(words[0], Clinte);
-						//msj enviar todos los clientes
-						msj_Todos("El usuario a entrado:",words[0]);
-						Metodos_Servidor Cliente_chatiando = new Metodos_Servidor(MensajeCliente, Clinte);
 						Byte[] uno = null;
 						
 						NetworkStream strinnn = Clinte.GetStream();
 						uno = Encoding.ASCII.GetBytes( "true");
 						strinnn.Write(uno, 0, uno.Length);
 						strinnn.Flush();
+						Cliente.Add(words[0], Clinte);
+						Metodos_Servidor Cliente_chatiando = new Metodos_Servidor(MensajeCliente, Clinte);
 						
 					}
 					else{
@@ -115,6 +113,7 @@ namespace PortafolioFinal_Server_Ventana
 		
 		public Metodos_Servidor(String nombres, TcpClient Clienteclases)
 		{
+			Clase_Servidor.msj_Todos("El usuario a entrado:",nombre);
 			nombre = nombres;
 			Clienteclase = Clienteclases;
 			hilo_chatiando = new Thread(chatiando);

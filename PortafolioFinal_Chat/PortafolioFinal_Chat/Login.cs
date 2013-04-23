@@ -16,7 +16,7 @@ namespace PortafolioFinal_Chat
 	[Activity (Label = "@string/app_name", MainLauncher = true)]
 	public class Login : Activity
 	{
-		public TcpClient Cliente;
+		public static TcpClient Cliente;
 		public NetworkStream StreamCliente;
 		public string direccionIP;
 		public string infoMensaje;
@@ -70,7 +70,7 @@ namespace PortafolioFinal_Chat
 						StreamCliente.Flush();
 						
 						infoMensaje = "Conectando Con el Servidor...";
-						Recivir()
+						Recivir();
 						Mensaje(infoMensaje);
 					}
 					
