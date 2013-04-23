@@ -15,7 +15,7 @@ namespace PortafolioFinal_Server_Ventana
 		static Hashtable Cliente;
 		public static bool EstadoServidor;
 		public static bool Ciclos = true;
-
+		
 		public void ClaseServidor()
 		{
 			
@@ -23,13 +23,13 @@ namespace PortafolioFinal_Server_Ventana
 			try
 			{
 				//Conectarme
-				Servidor = new TcpListener(IPAddress.Parse(MainWindow.stringIP), 6080);
+				Servidor = new TcpListener(IPAddress.Parse("10.0.0.3"), 6080);
 				Cliente = new Hashtable();
 				Servidor.Start();
 				Console.WriteLine("Servidor Conectado.....................");
 				EstadoServidor = true;
-
-
+				
+				
 				while (Ciclos)
 				{
 					TcpClient Clinte = Servidor.AcceptTcpClient();
@@ -39,14 +39,37 @@ namespace PortafolioFinal_Server_Ventana
 					NetworCliente.Read(msj_en_Byte, 0, msj_en_Byte.Length);
 					
 					MensajeCliente = Encoding.ASCII.GetString(msj_en_Byte, 0, msj_en_Byte.Length);
+					string[] words = MensajeCliente.Split(':');
 					
-					Cliente.Add(MensajeCliente, Clinte);
-					//msj enviar todos los clientes
-					msj_Todos(MensajeCliente,MensajeCliente);
-					
+					usuarios nuevo = new usuarios();
+					if(nuevo.Estan_Registrados(words[0],words[1])==true)
+					{
+						Cliente.Add(words[0], Clinte);
+						//msj enviar todos los clientes
+						msj_Todos("El usuario a entrado:",words[0]);
+						Metodos_Servidor Cliente_chatiando = new Metodos_Servidor(MensajeCliente, Clinte);
+						Byte[] uno = null;
+						
+						NetworkStream strinnn = Clinte.GetStream();
+						uno = Encoding.ASCII.GetBytes( "true");
+						strinnn.Write(uno, 0, uno.Length);
+						strinnn.Flush();
+						
+					}
+					else{
+						
+						Byte[] uno = null;
+						
+						NetworkStream strinnn = Clinte.GetStream();
+						uno = Encoding.ASCII.GetBytes("false");
+						strinnn.Write(uno, 0, uno.Length);
+						strinnn.Flush();
+						
+						
+					}
 					
 					//ciclo infinito 
-					Metodos_Servidor nuevo = new Metodos_Servidor(MensajeCliente, Clinte);
+					
 				}
 			}
 			catch
@@ -59,7 +82,7 @@ namespace PortafolioFinal_Server_Ventana
 				Servidor.Stop();
 			}	
 		}
-
+		
 		public static void   msj_Todos(String Mensaje,String Nombre)
 		{
 			
@@ -71,34 +94,34 @@ namespace PortafolioFinal_Server_Ventana
 				uno = Encoding.ASCII.GetBytes(Nombre + " : " + Mensaje);
 				strinnn.Write(uno, 0, uno.Length);
 				strinnn.Flush();
+				
 				Console.WriteLine(Nombre + " : " + Mensaje);
 				
 			}
 		}
-
+		
 		public static void CerrarServidor()
 		{
-			MainWindow.HiloServidor.Abort();
 			Ciclos = false;
 		}
 	}
-
+	
 	public class Metodos_Servidor 
 	{
 		public static Thread hilo_chatiando;
 		public static bool Ciclos =true;
 		String nombre;
 		TcpClient Clienteclase;
-
+		
 		public Metodos_Servidor(String nombres, TcpClient Clienteclases)
 		{
 			nombre = nombres;
 			Clienteclase = Clienteclases;
-			 hilo_chatiando = new Thread(chatiando);
-				hilo_chatiando.Start();
+			hilo_chatiando = new Thread(chatiando);
+			hilo_chatiando.Start();
 			
 		}
-
+		
 		public void chatiando() 
 		{
 			String MensajeCliente;
@@ -106,19 +129,19 @@ namespace PortafolioFinal_Server_Ventana
 			{
 				
 				Byte[] msj_en_Byte = new Byte[140];
-				
+				//leer msj
 				NetworkStream NetworCliente = Clienteclase.GetStream();
 				NetworCliente.Read(msj_en_Byte, 0, msj_en_Byte.Length);
 				
 				MensajeCliente = Encoding.ASCII.GetString(msj_en_Byte, 0, msj_en_Byte.Length);
-				
+				Console.WriteLine(MensajeCliente);
 				//msj enviar todos los clientes
 				Clase_Servidor.msj_Todos(MensajeCliente,nombre);
 				//ciclo infinito 
 				
 			}
 		}
-
+		
 		public static void Cerrar_Hilos()
 		{
 			Ciclos=false;

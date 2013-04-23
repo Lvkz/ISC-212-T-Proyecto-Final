@@ -70,7 +70,7 @@ namespace PortafolioFinal_Chat
 						StreamCliente.Flush();
 						
 						infoMensaje = "Conectando Con el Servidor...";
-						verificacion = true;
+						Recivir()
 						Mensaje(infoMensaje);
 					}
 					
@@ -112,6 +112,31 @@ namespace PortafolioFinal_Chat
 
 				builder.Show ();
 			});
+		}
+		void Recivir()
+		{
+			bool ciclo=true;
+			string MensajeServidor;
+			while(ciclo)
+			{
+				Byte[] msj_en_Byte = new Byte[4];
+				//leer msj
+				NetworkStream NetworCliente = Cliente.GetStream();
+				NetworCliente.Read(msj_en_Byte, 0, msj_en_Byte.Length);
+				
+				MensajeServidor = Encoding.ASCII.GetString(msj_en_Byte, 0, msj_en_Byte.Length);
+				if(MensajeServidor=="true")
+				{
+					verificacion = true;
+					ciclo=false;
+				}
+				if(MensajeServidor=="fals")
+				{
+					infoMensaje=("No esta en la base de datos");
+					verificacion = false;
+					ciclo=false;
+				}
+			}
 		}
 	}
 }
