@@ -6,9 +6,9 @@ using System.Threading;
 
 public partial class MainWindow : Gtk.Window
 {	
-	public Thread HiloServidor;
-	public Thread HiloEstado;
-	public Clase_Servidor Servidor;
+	public static Thread HiloServidor;
+	public static Thread HiloEstado;
+	public static Clase_Servidor Servidor;
 	public static string stringIP;
 
 	public MainWindow (): base (Gtk.WindowType.Toplevel)
@@ -58,7 +58,6 @@ public partial class MainWindow : Gtk.Window
 
 	protected void btnTerminar_Clicked (object sender, EventArgs e)
 	{
-		Clase_Servidor.CerrarServidor();
 		HiloServidor.Abort();
 
 		labelEstadoServidor.LabelProp = @"<span foreground=""red"">        Desconectado.</span>";

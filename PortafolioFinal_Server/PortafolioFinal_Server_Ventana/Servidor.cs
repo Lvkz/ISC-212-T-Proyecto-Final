@@ -78,6 +78,7 @@ namespace PortafolioFinal_Server_Ventana
 
 		public static void CerrarServidor()
 		{
+			MainWindow.HiloServidor.Abort();
 			Ciclos = false;
 		}
 	}

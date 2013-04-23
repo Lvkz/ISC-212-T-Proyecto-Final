@@ -125,7 +125,7 @@ namespace PortafolioFinal_Chat
 			public const int txt_Mensaje = 2131165189;
 			
 			// aapt resource value: 0x7f070003
-			public const int webView1 = 2131165187;
+			public const int txt_MensajesRecibidos = 2131165187;
 			
 			static Id()
 			{

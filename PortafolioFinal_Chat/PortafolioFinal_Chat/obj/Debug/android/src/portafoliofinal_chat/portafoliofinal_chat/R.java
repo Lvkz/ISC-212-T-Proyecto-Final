@@ -33,7 +33,7 @@ public final class R {
         public static final int textboxIP=0x7f070009;
         public static final int textboxNombre=0x7f07000b;
         public static final int txt_Mensaje=0x7f070005;
-        public static final int webView1=0x7f070003;
+        public static final int txt_MensajesRecibidos=0x7f070003;
     }
     public static final class layout {
         public static final int fragmentchats=0x7f030000;

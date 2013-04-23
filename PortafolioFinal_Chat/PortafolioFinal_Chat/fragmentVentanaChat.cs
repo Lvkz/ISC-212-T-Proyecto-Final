@@ -25,8 +25,11 @@ namespace PortafolioFinal_Chat
 
 			var view = inflater.Inflate (Resource.Layout.fragmentVentanaChat, container, false);
 			var labelConversacion = view.FindViewById<TextView> (Resource.Id.label_Titulo);
+			var historialConversacion = view.FindViewById<EditText> (Resource.Id.txt_MensajesRecibidos);
+			var textoMensaje = view.FindViewById<EditText> (Resource.Id.txt_Mensaje);
+			var btnEnviar = view.FindViewById<EditText> (Resource.Id.btn_Enviar);
 
-			labelConversacion.Text = "Conversando con : " + variablesGlobales.textoConversacion;
+			labelConversacion.Text = "Conversando en : " + variablesGlobales.textoConversacion;
 
 			return view;
 		}
