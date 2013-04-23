@@ -92,9 +92,16 @@ public partial class MainWindow : Gtk.Window
 
 	protected void btn_Enviar_Clicked (object sender, EventArgs e)
 	{
-		throw new NotImplementedException ();
-		Thread hilo_nuevo = new Thread(	Clase_Servidor.msj_Todos(entry1.Text,"Servidor"));
-		hilo_nuevo.Start();
-		entry1.Text="";
+
 	}
+	void GtkTextviewAppend(GtkWidget *textview, gchar *text)
+	{
+		GtkTextBuffer *tbuffer;
+		GtkTextIter ei;
+		
+		tbuffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview));
+		gtk_text_buffer_get_end_iter(tbuffer, &ei);
+		gtk_text_buffer_insert(tbuffer, &ei, text, -1);
+	}
+
 }

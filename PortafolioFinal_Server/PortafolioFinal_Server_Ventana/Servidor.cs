@@ -26,6 +26,7 @@ namespace PortafolioFinal_Server_Ventana
 				Servidor = new TcpListener(IPAddress.Parse(MainWindow.stringIP), 6080);
 				Cliente = new Hashtable();
 				Servidor.Start();
+				MainWindow.Mensajes_informativos("Servidor Conectado.....................");
 				Console.WriteLine("Servidor Conectado.....................");
 				EstadoServidor = true;
 				
