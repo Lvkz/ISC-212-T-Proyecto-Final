@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using PortafolioFinal_Server_Ventana;
 
 public partial class MainWindow : Gtk.Window
 {	

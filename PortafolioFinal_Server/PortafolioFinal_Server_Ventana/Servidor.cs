@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Collections;
 using Gtk;
+using PortafolioFinal_Server_Ventana;
 
 namespace PortafolioFinal_Server_Ventana
 {
@@ -33,6 +34,8 @@ namespace PortafolioFinal_Server_Ventana
 				//Se crea una instancia nueva para poder acceder al método que va a llenar el textview.
 				MainWindow ventana = new MainWindow();
 				ventana.anadir_Registro(mensajeRegistro);
+				//MainWindow.anadirTextView(mensajeRegistro, 1);
+
 
 				Console.WriteLine("Servidor Conectado.....................");
 				EstadoServidor = true;
@@ -45,10 +48,11 @@ namespace PortafolioFinal_Server_Ventana
 					
 					NetworkStream NetworCliente = Clinte.GetStream();
 					NetworCliente.Read(msj_en_Byte, 0, msj_en_Byte.Length);
+					//ventana.anadir_Registro(mensajeRegistro);
 					
 					MensajeCliente = Encoding.ASCII.GetString(msj_en_Byte, 0, msj_en_Byte.Length);
 					string[] words = MensajeCliente.Split(':');
-
+					//ventana.anadir_Registro(mensajeRegistro);
 
 
 					usuarios nuevo = new usuarios();
@@ -113,7 +117,7 @@ namespace PortafolioFinal_Server_Ventana
 			Ciclos = false;
 		}
 	}
-	
+
 	public class Metodos_Servidor 
 	{
 		public static Thread hilo_chatiando;
