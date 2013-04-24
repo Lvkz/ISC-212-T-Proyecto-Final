@@ -18,10 +18,10 @@ namespace PortafolioFinal_Chat
 	{
 		public static TcpClient Cliente;
 		public NetworkStream StreamCliente;
-		public string direccionIP;
+		public static string direccionIP;
 		public string infoMensaje;
 		public bool verificacion;
-
+		
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);	
@@ -31,11 +31,11 @@ namespace PortafolioFinal_Chat
 			EditText EditNombre = FindViewById<EditText> (Resource.Id.textboxNombre);
 			EditText EditContrasena = FindViewById<EditText> (Resource.Id.textboxContraseña);
 			EditText EditDireccionIP = FindViewById<EditText> (Resource.Id.textboxIP);
-
+			
 			btnLogin.Click += (sender, e) => {
-
+				
 				direccionIP = EditDireccionIP.Text;
-
+				
 				//Salir si la dirección IP no esta digitada.
 				if(EditDireccionIP.Text==string.Empty)
 				{
@@ -43,7 +43,7 @@ namespace PortafolioFinal_Chat
 					Mensaje(infoMensaje);
 					return;
 				}
-
+				
 				//Salir si el nombre no esta digitado.
 				else if(EditNombre.Text==string.Empty)
 				{
@@ -58,7 +58,7 @@ namespace PortafolioFinal_Chat
 					Mensaje(infoMensaje);
 					return;
 				}
-
+				
 				else
 				{
 					try
@@ -70,8 +70,8 @@ namespace PortafolioFinal_Chat
 						StreamCliente.Flush();
 						
 						infoMensaje = "Conectando Con el Servidor...";
+						Recivir();
 						Mensaje(infoMensaje);
-						//Recivir();
 					}
 					
 					catch 
@@ -83,7 +83,7 @@ namespace PortafolioFinal_Chat
 					finally
 					{
 						Console.WriteLine(infoMensaje);
-
+						
 						if (verificacion)
 						{
 							StartActivity(typeof(VentanaPrincipal));
@@ -96,7 +96,7 @@ namespace PortafolioFinal_Chat
 				}
 			};
 		}
-
+		
 		public void Mensaje (string infoMensaje)
 		{
 			RunOnUiThread (() => {
@@ -105,20 +105,18 @@ namespace PortafolioFinal_Chat
 				builder.SetTitle ("Aviso");
 				builder.SetMessage (infoMensaje);
 				builder.SetCancelable (false);
-
+				
 				if (!verificacion) {
 					builder.SetPositiveButton ("OK", delegate {	});
 				}
-
+				
 				builder.Show ();
 			});
 		}
-
 		void Recivir()
 		{
 			bool ciclo=true;
 			string MensajeServidor;
-
 			while(ciclo)
 			{
 				Byte[] msj_en_Byte = new Byte[4];
@@ -127,12 +125,12 @@ namespace PortafolioFinal_Chat
 				NetworCliente.Read(msj_en_Byte, 0, msj_en_Byte.Length);
 				
 				MensajeServidor = Encoding.ASCII.GetString(msj_en_Byte, 0, msj_en_Byte.Length);
-				if(MensajeServidor =="true")
+				if(MensajeServidor=="true")
 				{
 					verificacion = true;
 					ciclo=false;
 				}
-				if(MensajeServidor =="false")
+				if(MensajeServidor=="fals")
 				{
 					infoMensaje=("No esta en la base de datos");
 					verificacion = false;

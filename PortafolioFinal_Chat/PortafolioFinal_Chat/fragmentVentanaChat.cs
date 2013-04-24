@@ -25,24 +25,28 @@ namespace PortafolioFinal_Chat
 		static public Thread Hilo;
 		LayoutInflater inflater;
 		ViewGroup container;
-		
+		public EditText txtMensajesRecibidos;
+
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			this.inflater= inflater;
 			this.container= container;
 			base.OnCreateView (inflater, container, savedInstanceState);
+
+			var view = inflater.Inflate (Resource.Layout.fragmentVentanaChat, container, false);
+			var labelConversacion = view.FindViewById<TextView> (Resource.Id.label_Titulo);
+			var txtMensaje = view.FindViewById<EditText> (Resource.Id.txt_Mensaje);
+
+			txtMensajesRecibidos = view.FindViewById<EditText> (Resource.Id.txt_MensajesRecibidos);
+			txtMensajesRecibidos.Text = "";
+
 			Hilo = new Thread(Recivir_Mensaje);
 			Hilo.Start();
 			//var ventanaPrincipal = (VentanaPrincipal) this.Activity;
 			//VentanaPrincipal.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-			
-			var view = inflater.Inflate (Resource.Layout.fragmentVentanaChat, container, false);
-			var labelConversacion = view.FindViewById<TextView> (Resource.Id.label_Titulo);
-			var listviewContactos = view.FindViewById<ListView> (Resource.Id.listview_Contactos);
-			var txtMensaje = view.FindViewById<EditText> (Resource.Id.txt_Mensaje);
-			var txtMensajesRecibidos = view.FindViewById<EditText> (Resource.Id.txt_MensajesRecibidos);
 
 			var btnEnviar = view.FindViewById<Button> (Resource.Id.btn_Enviar);
+
 			btnEnviar.Click += (sender, e) => {
 				
 				try
@@ -59,24 +63,14 @@ namespace PortafolioFinal_Chat
 				}
 				
 			};
+
 			labelConversacion.Text = "Conversando con : " + variablesGlobales.textoConversacion;
 			
 			return view;
 		}
 
-		public void Mensaje_REcivido()
-		{
-			var view = inflater.Inflate (Resource.Layout.fragmentVentanaChat, container, false);
-			var txtVerMensaje = view.FindViewById<EditText> (Resource.Id.txt_MensajesRecibidos);
-			
-			txtVerMensaje.Text = "asdasdasdasdas  =>>" ;
-			Hilo.Abort();
-		}
 		private void Recivir_Mensaje()
 		{ 
-			var view = inflater.Inflate (Resource.Layout.fragmentVentanaChat, container, false);
-			var txtMensajesRecibidos = view.FindViewById<EditText> (Resource.Id.txt_MensajesRecibidos);
-
 			while(true)
 			{
 				StreamCliente = Login.Cliente.GetStream();
@@ -85,10 +79,13 @@ namespace PortafolioFinal_Chat
 				mensaje = Encoding.ASCII.GetString(bit);
 				Mensaje_REcivido();
 
-				txtMensajesRecibidos.Append(mensaje);
-				
+				txtMensajesRecibidos.Append(mensaje);	
 			}
-			
+		}
+
+		public void Mensaje_REcivido()
+		{
+			txtMensajesRecibidos.Text = mensaje;
 		}
 	}
 }

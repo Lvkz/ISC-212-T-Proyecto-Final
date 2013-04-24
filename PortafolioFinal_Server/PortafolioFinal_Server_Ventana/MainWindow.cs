@@ -6,7 +6,6 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
-using PortafolioFinal_Server_Ventana;
 
 public partial class MainWindow : Gtk.Window
 {	
@@ -14,6 +13,22 @@ public partial class MainWindow : Gtk.Window
 	public static Thread HiloEstado;
 	public static Clase_Servidor Servidor;
 	public static string stringIP;
+
+	public void anadir_Registro(string textToAdd) 
+	{	
+		TextIter mIter = textviewRegistro.Buffer.EndIter;
+		textviewRegistro.Buffer.Insert(ref mIter, textToAdd);
+		textviewRegistro.ScrollToIter(textviewRegistro.Buffer.EndIter, 0, false, 0, 0);
+	}
+	
+	public void anadir_Mensaje(string textToAdd) 
+	{	
+		TextIter mIter = textviewMensajes.Buffer.EndIter;
+		textviewMensajes.Buffer.Insert(ref mIter, textToAdd);
+		textviewMensajes.ScrollToIter(textviewMensajes.Buffer.EndIter, 0, false, 0, 0);
+	}
+
+
 
 	public MainWindow (): base (Gtk.WindowType.Toplevel)
 	{
@@ -92,19 +107,5 @@ public partial class MainWindow : Gtk.Window
 	protected void btn_Enviar_Clicked (object sender, EventArgs e)
 	{
 
-	}
-
-	public void anadir_Registro(string textToAdd) 
-	{	
-		TextIter mIter = textviewRegistro.Buffer.EndIter;
-		textviewRegistro.Buffer.Insert(ref mIter, textToAdd);
-		textviewRegistro.ScrollToIter(textviewRegistro.Buffer.EndIter, 0, false, 0, 0);
-	}
-
-	public void anadir_Mensaje(string textToAdd) 
-	{	
-		TextIter mIter = textviewMensajes.Buffer.EndIter;
-		textviewMensajes.Buffer.Insert(ref mIter, textToAdd);
-		textviewMensajes.ScrollToIter(textviewMensajes.Buffer.EndIter, 0, false, 0, 0);
 	}
 }

@@ -29,13 +29,14 @@ namespace PortafolioFinal_Server_Ventana
 				Servidor = new TcpListener(IPAddress.Parse(MainWindow.stringIP), 6080);
 				Cliente = new Hashtable();
 				Servidor.Start();
-				mensajeRegistro = "Servidor Conectado.....................";
+				mensajeRegistro = "Servidor Conectado.....................\n";
 
 				//Se crea una instancia nueva para poder acceder al método que va a llenar el textview.
 				//MainWindow ventana = new MainWindow();
 				//ventana.anadir_Registro(mensajeRegistro);
+				MainClass.win.anadir_Registro(mensajeRegistro);
 
-				Console.WriteLine("Servidor Conectado.....................");
+				Console.WriteLine("Servidor Conectado.....................\n");
 				EstadoServidor = true;
 				
 				
@@ -83,7 +84,8 @@ namespace PortafolioFinal_Server_Ventana
 			catch
 			{
 				EstadoServidor = false;
-				Console.WriteLine("Error");
+				mensajeRegistro = "¡ERROR!\n";
+				//Console.WriteLine("Error");
 				
 			}
 			finally {
@@ -123,7 +125,7 @@ namespace PortafolioFinal_Server_Ventana
 		
 		public Metodos_Servidor(String nombres, TcpClient Clienteclases)
 		{
-			Clase_Servidor.msj_Todos("El usuario a entrado:",nombre);
+			Clase_Servidor.msj_Todos("El usuario {0} a entrado.\n",nombre);
 			nombre = nombres;
 			Clienteclase = Clienteclases;
 			hilo_chatiando = new Thread(chatiando);
